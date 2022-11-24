@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* dont write style body or any universal tags 
+write style for unique ones as every page has 
+one css file linked */
+ul{
+    display: flex;
+    padding: 15px;
+    font-size: large;
+}
+ul li{
+    list-style: none;
+    justify-content: space-between;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(60, 130, 223);
+    color: white;
+    width: 100%;
+    height: 50px;
+}
+#home{
+    background-color: transparent;
+    border: none;
+    color: white;
+
+}
