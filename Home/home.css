@@ -3,8 +3,21 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: rgb(22, 22, 22);
+}
+/* .home{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+} */
 a{
     text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#home{
+    background-color: #588157;
+    border: none;
     color: white;
 }
 /* dont write style body or any universal tags 
@@ -17,20 +30,165 @@ ul{
 }
 ul li{
     list-style: none;
-    justify-content: space-between;
-
+    padding: 0 10px 0 10px;
 }
-header{
+ul li a:hover{
+    color: rgb(233, 228, 194);
+    transition: 3sec ease-in-out;
+    
+}
+.header h2{
+    padding: 0 50px;
+    margin: 10px ;
+}
+.header{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(60, 130, 223);
-    color: white;
     width: 100%;
     height: 50px;
+    background-color: #588157;
+    position: fixed;
 }
-#home{
+
+    /* main style */
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* .main{
+    background-color: rgb(39, 38, 38);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+} */
+
+/* timer style */
+
+.timer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel{
+    width: 180px;
+    height: 45px;
+    background-color: #588157;
+    display: flex;
+    color: white;
+    font-size: larger;
+    position: absolute;
+    top: 120px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.panel p{
+    padding: 20px;
+}
+.timer{
+    position: absolute;
+    top: 200px;
+}
+.circle{
+    background-color: #588157;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(255, 255, 255);
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #588157;
+    border-radius: 30px;
+    width: 100px;
+    height: 45px;
+    position: absolute;
+    top: 485px;
+}
+.controls button{
     background-color: transparent;
     border: none;
+    font-size: larger;
     color: white;
+}
+         
+/* music-player style */
 
+/* .music-player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.music-controls{
+    position: absolute;
+    bottom: 50px;
+}
+.music-controls button{
+    font-size: larger;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+.music-controls:hover{
+    color: #588157;
+}
+i{
+    font-size: 35px;
+    padding: 0 20px;
+}
+#pa{
+    font-size: 50px;
+} */
+
+/* style to plus button for adding notes  */
+.add-note{
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    padding: 0 30px;
+    width: 50px;
+    transition: .3s ease;
+} 
+.add-note:hover{
+    /* hover effect for plus button */
+    transform: scale(1.2);
+
+}
+
+.plus{
+    background-color: #588157;
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.add{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: xx-large;
 }
