@@ -12,9 +12,9 @@
 
 function signuptoggle() {
     let blur=document.getElementById('blur');
-    blur.classList.toggle('active');
+    blur.classList.add('active');
     let popup = document.getElementById('signup-box');
-    popup.classList.toggle('active');
+    popup.classList.add('active');
 }
 function logintoggle() {
     let blur=document.getElementById('blur');
@@ -23,9 +23,17 @@ function logintoggle() {
     popup.classList.add('active');
 }
 
-// x-mark code to close login or signup tabs
+// x-mark code to close login and signup tabs
 
-function hide(){
-    let x=document.getElementById('x-mark');
-    x.classList.remove('active');
+function signuphide(){
+    let remove=document.getElementById('signup-box');
+    remove.classList.remove('active');
+    let blur=document.getElementById('blur');
+    blur.classList.remove('active');
+}
+function loginhide(){
+    let remove=document.getElementById('login-box');
+    remove.classList.remove('active');
+    let blur=document.getElementById('blur');
+    blur.classList.remove('active');
 }

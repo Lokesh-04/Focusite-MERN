@@ -43,7 +43,8 @@
      <!-- sign-up box -->
         <div class="signup-box" id="signup-box">
         <h1>Sign Up</h1>
-        <i id="x-mark" class="fa-solid fa-xmark"></i>
+        <i id="x-mark" onclick="signuphide()" class="fa-solid fa-xmark"></i>
+        
         <form name="f1" action="Home\home.htm"> 
           <!-- there is some problem with method it is arising a http error 405 should think of this -->
           <label>Username</label>
@@ -66,7 +67,7 @@
       <!-- login-box -->
       <div class="login-box" id="login-box" method="post">
         <h1>Login</h1>
-        <i id="x-mark" onclick="hide()" class="fa-solid fa-xmark"></i>
+        <i id="x-mark" onclick="loginhide()" class="fa-solid fa-xmark"></i>
         <form name="f2" action="Home\home.htm">
           <label>Email</label>
           <input type="email" placeholder="" />

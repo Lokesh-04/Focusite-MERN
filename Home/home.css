@@ -142,43 +142,54 @@ a:hover{
     position: absolute;
     bottom: 50px;
 }
-.music-controls button{
-    font-size: larger;
-    padding: 10px;
-    border: none;
-    background-color: transparent;
-    color: #24292f;
-}
-.music-controls:hover{
+/* .music-controls:hover{
     color: #FFDD00;
-}
-i{
+} */
+.music-controls i{
     font-size: 35px;
-    padding: 0 20px;
+    padding: 0 20px 0 20px ;
+    color: #24292f;
+    transition: .1s ease-in-out;
+    
 }
 #pa{
     font-size: 50px;
+    transition: .1s ease-in-out;
 }
 
 /* style to plus button for adding notes  */
 .add-note{
-    display: flex;
+    /* display: flex;
     flex-direction: row-reverse;
     position: absolute;
     bottom: 50px;
     right: 30px;
     padding: 0 30px;
     width: 50px;
+    height: 50px;
+    transition: .2s ease-in;
+    background-color: #24292f; */
+    width: 48px;
+    height: 48px;
+    background-color: #24292f;
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
     transition: .2s ease-in;
     
 } 
-.add-note:hover{
+.add-note:hover,#plus,#pa:hover,#ba:hover,#fa:hover{
     /* hover effect for plus button */
     transform: scale(1.1);
 
 }
 
-.plus{
+/* .plus{
     background-color: #24292f;
     display: flex;
     border-radius: 15px;
@@ -195,4 +206,10 @@ i{
     border: none;
    
     font-size: xx-large;
+} */
+#plus{
+    color: #FFFFFF;
+    font-size: 15px;
+    transition: .2s ease-in;
+
 }
