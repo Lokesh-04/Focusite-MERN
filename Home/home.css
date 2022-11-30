@@ -4,7 +4,8 @@
     margin: 0;
 }
 body{
-    background-color: #BFBFBF;
+    /* background-color: #ffffff; */
+    background: linear-gradient( left, #33ccff 0%, #ff99cc 100%);
 }
 a{
     text-decoration: none;
@@ -53,17 +54,8 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-
-/* .main{
-    background-color: rgb(39, 38, 38);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
-} */
 
 /* timer style */
 
@@ -78,6 +70,12 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
 }
 .panel{
     width: 180px;
@@ -95,6 +93,12 @@ a:hover{
 }
 .panel p{
     padding: 20px;
+    transition: 1s ease-in;
+}
+.panel p.active{
+    opacity: 1;
+    color: var(--color-secondary);
+    background-color: green;
 }
 .timer{
     position: absolute;
@@ -115,13 +119,12 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #24292f;
     border-radius: 30px;
     width: 100px;
     height: 45px;
     position: absolute;
     top: 465px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
 }
 .controls button{
     background-color: transparent;
@@ -130,7 +133,11 @@ a:hover{
     
     color: #ffffff;
 }
-         
+.controls i{
+    color: #24292f;
+    font-size: 30px;
+}
+
 /* music-player style */
 
 .music-player{
@@ -142,9 +149,6 @@ a:hover{
     position: absolute;
     bottom: 50px;
 }
-/* .music-controls:hover{
-    color: #FFDD00;
-} */
 .music-controls i{
     font-size: 35px;
     padding: 0 20px 0 20px ;
@@ -159,16 +163,6 @@ a:hover{
 
 /* style to plus button for adding notes  */
 .add-note{
-    /* display: flex;
-    flex-direction: row-reverse;
-    position: absolute;
-    bottom: 50px;
-    right: 30px;
-    padding: 0 30px;
-    width: 50px;
-    height: 50px;
-    transition: .2s ease-in;
-    background-color: #24292f; */
     width: 48px;
     height: 48px;
     background-color: #24292f;
@@ -188,25 +182,6 @@ a:hover{
     transform: scale(1.1);
 
 }
-
-/* .plus{
-    background-color: #24292f;
-    display: flex;
-    border-radius: 15px;
-    justify-content: center;
-    align-items: center;
-    transition: .2s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.add{
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    color: #ffffff;
-    border: none;
-   
-    font-size: xx-large;
-} */
 #plus{
     color: #FFFFFF;
     font-size: 15px;
