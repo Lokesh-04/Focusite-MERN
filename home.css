@@ -4,21 +4,17 @@
     margin: 0;
 }
 body{
-    background-color: rgb(22, 22, 22);
+    background-color: #BFBFBF;
 }
-/* .home{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-} */
 a{
     text-decoration: none;
     color: rgb(255, 255, 255);
+    transition: .3s ease-in;
 }
 #home{
-    background-color: #588157;
+    background-color: #24292f;
     border: none;
-    color: white;
+    color: #FFFFFF;
 }
 /* dont write style body or any universal tags 
 write style for unique ones as every page has 
@@ -26,15 +22,14 @@ one css file linked */
 ul{
     display: flex;
     padding: 15px;
-    font-size: large;
+    font-size: 14px;
 }
 ul li{
     list-style: none;
     padding: 0 10px 0 10px;
 }
-ul li a:hover{
-    color: rgb(233, 228, 194);
-    transition: 3sec ease-in-out;
+a:hover{
+    color: rgb(174, 179, 185);
     
 }
 .header h2{
@@ -46,8 +41,11 @@ ul li a:hover{
     justify-content: space-between;
     width: 100%;
     height: 50px;
-    background-color: #588157;
+    background-color: rgb(36, 41, 47);
     position: fixed;
+    font-weight: 600;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
     /* main style */
@@ -55,7 +53,6 @@ ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 /* .main{
@@ -85,58 +82,61 @@ ul li a:hover{
 .panel{
     width: 180px;
     height: 45px;
-    background-color: #588157;
+    background-color: rgb(36, 41, 47);
     display: flex;
     color: white;
     font-size: larger;
     position: absolute;
-    top: 120px;
+    top: 110px;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .panel p{
     padding: 20px;
 }
 .timer{
     position: absolute;
-    top: 200px;
+    top: 190px;
 }
 .circle{
-    background-color: #588157;
+    background-color: #ffffff;
     height: 230px;
     width: 230px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid rgb(255, 255, 255);
+    border: 5px solid #24292f;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .controls{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #588157;
+    background-color: #24292f;
     border-radius: 30px;
     width: 100px;
     height: 45px;
     position: absolute;
-    top: 485px;
+    top: 465px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .controls button{
     background-color: transparent;
     border: none;
-    font-size: larger;
-    color: white;
+    font-size: 20px;
+    
+    color: #ffffff;
 }
          
 /* music-player style */
 
-/* .music-player{
+.music-player{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 .music-controls{
     position: absolute;
@@ -147,10 +147,10 @@ ul li a:hover{
     padding: 10px;
     border: none;
     background-color: transparent;
-    color: white;
+    color: #24292f;
 }
 .music-controls:hover{
-    color: #588157;
+    color: #FFDD00;
 }
 i{
     font-size: 35px;
@@ -158,7 +158,7 @@ i{
 }
 #pa{
     font-size: 50px;
-} */
+}
 
 /* style to plus button for adding notes  */
 .add-note{
@@ -169,26 +169,30 @@ i{
     right: 30px;
     padding: 0 30px;
     width: 50px;
-    transition: .3s ease;
+    transition: .2s ease-in;
+    
 } 
 .add-note:hover{
     /* hover effect for plus button */
-    transform: scale(1.2);
+    transform: scale(1.1);
 
 }
 
 .plus{
-    background-color: #588157;
+    background-color: #24292f;
     display: flex;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
+    transition: .2s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .add{
     width: 50px;
     height: 50px;
     background-color: transparent;
-    color: white;
+    color: #ffffff;
     border: none;
+   
     font-size: xx-large;
 }

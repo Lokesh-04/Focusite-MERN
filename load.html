@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Focusite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="load.css">
+</head>
+<body>
+    <div class="main" id="blur">
+        <div class="header">
+        <button id="home"><h2>Focusite</h2></button>
+         <div class="buttons">
+            <button id="login" onclick="logintoggle()">login</button>
+            <button id="signup" onclick="signuptoggle()">Sign up</button>
+         </div>
+        </div>
+        
+        <div class="image-slider">
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="footer">
+
+        </div>
+
+    </div>
+    <!-- main div ending -->
+    
+
+
+     <!-- sign-up box -->
+        <div class="signup-box" id="signup-box">
+        <h1>Sign Up</h1>
+        <i id="x-mark" class="fa-solid fa-xmark"></i>
+        <form name="f1" action="home.htm" method="post">
+          <label>Username</label>
+          <input type="text" placeholder="" name="name">
+          <label>Email</label>
+          <input type="email" placeholder="" name="email">
+          <label>Password</label>
+          <input type="password" placeholder="" name="password">
+          <label>Confirm Password</label>
+          <input type="password" placeholder="" />
+          <input id="sign-up-submit" type="submit" value="Submit" />
+         </form>
+        <p>
+            <!-- add terms and conditions & Privacy Policy html files -->
+          By clicking the Sign Up button,you agree to our <br />
+          <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+        </p>
+      </div>
+      <!-- login-box -->
+      <div class="login-box" id="login-box" method="post">
+        <h1>Login</h1>
+        <i id="x-mark" onclick="hide()" class="fa-solid fa-xmark"></i>
+        <form name="f2" action="home.htm">
+          <label>Email</label>
+          <input type="email" placeholder="" />
+          <label>Password</label>
+          <input type="password" placeholder="" />
+          <input id="login-submit" type="submit" value="Submit" />
+        </form>
+      </div>
+     
+    <!-- add sections about explaining our features 
+    take github login page as inspiration -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>

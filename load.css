@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+#home{
+    background-color: rgb(36, 41, 47);
+    border: none;
+    color: white;
+}
+.main{
+  position: relative;
+
+}
+.main#blur.active{
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+
+}
+.header h2{
+    padding: 0 50px;
+    margin: 10px ;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(36, 41, 47);
+    position: fixed;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.buttons{
+    padding: 3px ;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 5px;
+    bottom:20px;
+    font-style: bold;
+}
+.buttons button{
+  margin-left: 5px;
+}
+button{
+    cursor: pointer;
+}
+#login{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: transparent;
+}
+#login:hover{
+  background-color: #F7F7F7;
+
+}
+#signup{
+    padding: 5px;
+    border-radius: 5px;
+    border: transparent;
+    color: rgb(255, 255, 255);
+    background-color: #2c974b;
+}
+#signup:hover{
+  background-color: #3cb35e;
+
+}
+
+/* login and sign-up divisions */
+
+#signup-box{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 450px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+#signup-box.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0.5s;
+  }
+#login-box{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 360px;
+    height: 300px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 10px;
+
+    /* add closing buttons to both tabs for login and signup */
+  }
+#login-box.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0.5s;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+    color: #24292f;
+  }
+ 
+  form {
+    width: 300px;
+    padding: 0 0 20px 17px;
+    
+
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #24292f;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  input[type="button"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(36, 41, 47);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+  }
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #24292f;
+
+  }
+  p a{
+    /* text-decoration: none; */
+    color: rgb(53, 135, 236);
+    padding: 3px;
+  }
+#sign-up-submit,#login-submit{
+  background-color: #2c974b;
+  width: 320px;
+  margin-top: 20px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  height: 35px;
+
+}
+#sign-up-submit:hover,#login-submit:hover{
+    background-color: #3cb35e;
+}
+#login-submit
+{
+    margin-bottom: 30px;
+}
+#x-mark{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+}
+#x-mark:hover{
+  color: rgb(255, 30, 0);
+}
