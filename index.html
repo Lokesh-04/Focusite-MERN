@@ -44,7 +44,8 @@
         <div class="signup-box" id="signup-box">
         <h1>Sign Up</h1>
         <i id="x-mark" class="fa-solid fa-xmark"></i>
-        <form name="f1" action="Home\home.htm" method="post">
+        <form name="f1" action="Home\home.htm"> 
+          <!-- there is some problem with method it is arising a http error 405 should think of this -->
           <label>Username</label>
           <input type="text" placeholder="" name="name">
           <label>Email</label>
@@ -53,7 +54,8 @@
           <input type="password" placeholder="" name="password">
           <label>Confirm Password</label>
           <input type="password" placeholder="" />
-          <input id="sign-up-submit" type="submit" value="Submit" />
+          <!-- <input id="sign-up-submit" type="submit" value="Submit" /> -->
+          <input id="sign-up-submit" type="submit" value="Submit">
          </form>
         <p>
             <!-- add terms and conditions & Privacy Policy html files -->
