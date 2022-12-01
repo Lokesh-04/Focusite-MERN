@@ -1,6 +1,6 @@
 // music player js
 let song=document.getElementById("song")
-let arr=["Mainaudio1.mp3","Mainaudio2.mp3","Mainaudio3.mp3","audio4.mp3","audio5.mp3"]
+let arr=["Mainaudiofilesaudio1.mp3","Mainaudiofilesaudio2.mp3","Mainaudiofilesaudio3.mp3","Mainaudiofilesaudio4.mp3","Mainaudiofilesaudio5.mp3"]
 
 let length = arr.length
 let i=0
@@ -21,7 +21,7 @@ if ( i == arr.length-1 ){
 }
 else{
     i=i+1
-document.getElementById("song").setAttribute("src",arr[i].slice(0,4)+"\\"+arr[i].slice(4))    
+document.getElementById("song").setAttribute("src",arr[i].slice(0,4)+"\\"+arr[i].slice(4,14)+"\\"+arr[i].slice(14))    
 song=document.getElementById("song")    
 song.play()
 }
@@ -34,3 +34,4 @@ document.getElementById("song").setAttribute("src",arr[i])
 song=document.getElementById("song")    
 song.play()
 }
+//pomodoro timer js
