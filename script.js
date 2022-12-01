@@ -1,9 +1,3 @@
-// music player
-function play(){
-    let song = document.getElementById("song");
-    song.play();
-
-}
 // signup and login pages pop-ups
 
 function signuptoggle() {

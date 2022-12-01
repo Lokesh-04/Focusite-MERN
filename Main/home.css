@@ -156,11 +156,13 @@ a:hover{
     transition: .1s ease-in-out;
     
 }
-#pa{
+#play{
     font-size: 50px;
     transition: .1s ease-in-out;
 }
-
+#text{
+    display: none;
+}
 /* style to plus button for adding notes  */
 .add-note{
     width: 48px;
@@ -177,7 +179,7 @@ a:hover{
     transition: .2s ease-in;
     
 } 
-.add-note:hover,#plus,#pa:hover,#ba:hover,#fa:hover{
+.add-note:hover,#plus,#play:hover,#prev:hover,#next:hover{
     /* hover effect for plus button */
     transform: scale(1.1);
 

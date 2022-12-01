@@ -42,18 +42,17 @@
                 <a id="reset" href="./"><i class="fa-solid fa-arrow-rotate-left"></i></a>
             </div>
         </div>
-         <!-- music-player -->
-        <div class="music-player">
-            <div class="music-controls">
-            <i id="ba" class="fa-solid fa-backward-step"></i>
-            <i onclick="play()" id="pa" class="fa-solid fa-circle-play"></i>
-            <i id="fa" class="fa-solid fa-forward-step"></i>
-            </div>
-            <audio id="song">
-            <source src="Home\audiofiles\audio2.mp3">
-            </audio>
-        </div>
-        
+        <!-- music-player -->
+    <div class="music-player">
+    <div class="music-controls">
+    <i onclick="prev()" id="prev" class="fa-solid fa-backward-step"></i>
+    <i onclick="play()" id="play" class="fa-solid fa-circle-play"><p id="text">play</p></i>
+    <i onclick="next()" id="next" class="fa-solid fa-forward-step"></i>
+    </div>
+    <audio id="song">
+    <source src="Main\audio1.mp3">
+    </audio>
+</div>
        
     </div>
 
@@ -62,7 +61,7 @@
     <i id="plus" class="fa-sharp fa-solid fa-plus"></i>
     </div>
 
-    <script src="Home\home.js"></script>
+    <script src="home.js"></script>
 
 
 </body>
