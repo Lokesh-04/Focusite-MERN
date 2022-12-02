@@ -22,7 +22,7 @@
 
     <div class="main">
         <!-- pomodoro-timer -->
-        <div class="timer-container">
+        <!-- <div class="timer-container">
             <div class="panel">
                 <p id="work">work</p>
                 <p id="break">break</p>
@@ -41,17 +41,41 @@
 
                 <a id="reset" href="./"><i class="fa-solid fa-arrow-rotate-left"></i></a>
             </div>
+        </div> -->
+        <h1>Pomodoro Timer</h1>
+    <div id="container">
+        <p id="work" class="work">Work:</p>
+        <p id="break" class="break">Break:</p>
+        <p id="cycles" class="cycles">Cycles:</p>
+        <!--Work Timer-->
+        <div id="work-timer" class="timer">
+            <p id="work_minutes">25</p><p class="semicolon">:</p><p id="work_seconds">00</p>
         </div>
+
+        <!--Cycle Counter-->
+        <!-- try to change these cycles into small circles with highlighting number of cycles completed -->
+        <p id="counter" class="timer">0</p>
+
+        <!--Break Timer-->
+        <div id="break-timer" class="timer">
+            <p id="break_minutes">05</p><p class="semicolon">:</p><p id="break_seconds">00</p>
+        </div>
+        <button id="start" class="btn">start</button>
+        <button id="stop" class="btn">Pause</button>
+
+        <!-- try to add resume button -> onclick pause button -->
+        <button id="resume" class="btn">resume</button>
+        <button id="reset" class="btn">Reset</button>
+    </div>
+    
         <!-- music-player -->
     <div class="music-player">
     <div class="music-controls">
-    <i onclick="prev()" id="prev" class="fa-solid fa-backward-step"></i>
-    <i onclick="play()" id="play" class="fa-solid fa-circle-play"><p id="text">play</p></i>
-    <i onclick="next()" id="next" class="fa-solid fa-forward-step"></i>
+    <i id="prev" class="fa-solid fa-backward-step"></i>
+    <i id="play" class="fa-solid fa-circle-play"><p id="text">play</p></i>
+    <i id="next" class="fa-solid fa-forward-step"></i>
     </div>
-    <audio id="song">
-    <source src="Main\audiofiles\audio1.mp3">
-    </audio>
+    <audio src="audio1.mp3" id="song"></audio>
 </div>
        
     </div>
