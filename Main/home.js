@@ -4,7 +4,6 @@ var next=document.getElementById("next")
 var prev=document.getElementById("prev")
 let song=document.getElementById("song")
 let arr=["audio1.mp3","audio2.mp3","audio3.mp3","audio4.mp3","audio5.mp3"]
-
 let length = arr.length
 let i=0
 play.addEventListener("click", ()=>{        
@@ -14,7 +13,7 @@ song.pause()
 document.getElementById("text").innerHTML = "pause"    
    }    
 else{  document.getElementById("play").setAttribute("class","fa-solid fa-circle-pause")    
-song.play()    
+song.play()  
 document.getElementById("text").innerHTML = "play"    
     }
 })
@@ -63,10 +62,9 @@ start.addEventListener('click', function(){
         startTimer = setInterval(timer, 1000)
     } else {
         // if this is not mentioned then timer will run fast by clicking start button continuously
-        alert("Timer is already running");
+        alert("venu timer is already running");
     }
 })
-
 reset.addEventListener('click', function(){
     // reset needs to change everything to starting stage
     work_minutes.innerText = 25;
@@ -83,7 +81,7 @@ reset.addEventListener('click', function(){
 stop.addEventListener('click', function(){
     stopInterval()
     startTimer = undefined;
-    document.getElementById("stop")
+    // document.getElementById("stop")
 })
 
 

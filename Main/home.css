@@ -4,8 +4,7 @@
     margin: 0;
 }
 body{
-    /* background-color: #ffffff; */
-    background: linear-gradient( left, #33ccff 0%, #ff99cc 100%);
+   background-color: #1F1B2E;
 }
 a{
     text-decoration: none;
@@ -13,7 +12,7 @@ a{
     transition: .3s ease-in;
 }
 #home{
-    background-color: #24292f;
+    background-color: #6C4EB3;
     border: none;
     color: #FFFFFF;
 }
@@ -30,7 +29,7 @@ ul li{
     padding: 0 10px 0 10px;
 }
 a:hover{
-    color: rgb(174, 179, 185);
+    color: #c7bae9;
     
 }
 .header h2{
@@ -42,9 +41,11 @@ a:hover{
     justify-content: space-between;
     width: 100%;
     height: 50px;
-    background-color: rgb(36, 41, 47);
+    background-color: #6C4EB3;
+    /* display: none; */
     position: fixed;
     font-weight: 600;
+    
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
@@ -59,84 +60,11 @@ a:hover{
 
 /* timer style */
 
-.timer-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.timer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.time{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-}
-.panel{
-    width: 180px;
-    height: 45px;
-    background-color: rgb(36, 41, 47);
-    display: flex;
-    color: white;
-    font-size: larger;
-    position: absolute;
-    top: 110px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.panel p{
-    padding: 20px;
-    transition: 1s ease-in;
-}
-.panel p.active{
-    opacity: 1;
-    color: var(--color-secondary);
-    background-color: green;
-}
-.timer{
-    position: absolute;
-    top: 190px;
-}
-.circle{
-    background-color: #ffffff;
-    height: 230px;
-    width: 230px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid #24292f;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-.controls{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    width: 100px;
-    height: 45px;
-    position: absolute;
-    top: 465px;
-    
-}
-.controls button{
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    
-    color: #ffffff;
-}
-.controls i{
-    color: #24292f;
-    font-size: 30px;
-}
+
+
+
+
+
 
 /* music-player style */
 
@@ -152,7 +80,7 @@ a:hover{
 .music-controls i{
     font-size: 35px;
     padding: 0 20px 0 20px ;
-    color: #24292f;
+    color: #664EFF;
     transition: .1s ease-in-out;
     
 }
@@ -167,7 +95,7 @@ a:hover{
 .add-note{
     width: 48px;
     height: 48px;
-    background-color: #24292f;
+    background-color: #664EFF;
     display: flex;
     flex-direction: row-reverse;
     position: absolute;

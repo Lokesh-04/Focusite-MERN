@@ -42,14 +42,16 @@
                 <a id="reset" href="./"><i class="fa-solid fa-arrow-rotate-left"></i></a>
             </div>
         </div> -->
-        <h1>Pomodoro Timer</h1>
-    <div id="container">
+        <!-- <h1>Pomodoro Timer</h1> -->
+    <div id="pomodoro">
         <p id="work" class="work">Work:</p>
         <p id="break" class="break">Break:</p>
         <p id="cycles" class="cycles">Cycles:</p>
         <!--Work Timer-->
         <div id="work-timer" class="timer">
-            <p id="work_minutes">25</p><p class="semicolon">:</p><p id="work_seconds">00</p>
+            <p id="work_minutes">25</p>
+            <p class="semicolon">:</p>
+            <p id="work_seconds">00</p>
         </div>
 
         <!--Cycle Counter-->
@@ -58,11 +60,13 @@
 
         <!--Break Timer-->
         <div id="break-timer" class="timer">
-            <p id="break_minutes">05</p><p class="semicolon">:</p><p id="break_seconds">00</p>
+            <p id="break_minutes">5</p>
+            <p class="semicolon">:</p>
+            <p id="break_seconds">00</p>
         </div>
+
         <button id="start" class="btn">start</button>
         <button id="stop" class="btn">Pause</button>
-
         <!-- try to add resume button -> onclick pause button -->
         <button id="resume" class="btn">resume</button>
         <button id="reset" class="btn">Reset</button>
@@ -86,7 +90,9 @@
     </div>
 
     <script src="home.js"></script>
+   
 
 
 </body>
 </html>
+
