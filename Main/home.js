@@ -57,6 +57,7 @@ var break_seconds = document.getElementById('break_seconds');
 var startTimer;
 
 start.addEventListener('click', function(){
+
     if(startTimer === undefined){
         // setinterval is used to execute this code with specific speed 1000 = 1s
         startTimer = setInterval(timer, 1000)
@@ -73,8 +74,8 @@ reset.addEventListener('click', function(){
     break_minutes.innerText = 05;
     break_seconds.innerText = "00";
 
-    document.getElementById('counter').innerText = 0;
-    stopInterval()
+    // document.getElementById('counter').innerText = 0;
+    clearInterval(startTimer);
     startTimer = undefined;
 })
 
@@ -91,12 +92,15 @@ function timer(){
     if(work_seconds.innerText != 0){
         work_seconds.innerText--;
     } else if(work_minutes.innerText != 0 && work_seconds.innerText == 0){
-        work_seconds.innerText = 59;
+        work_seconds.innerText = 2;
         work_minutes.innerText--;
     }
 
     //Break Timer Countdown
     if(work_minutes.innerText == 0 && work_seconds.innerText == 0){
+        // doucument.getElementById("b_time").classList.add(" active")
+        doucument.getElementById("w_time").classList.remove("active")
+        
         if(break_seconds.innerText != 0){
             break_seconds.innerText--;
         } else if(break_minutes.innerText != 0 && break_seconds.innerText == 0){

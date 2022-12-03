@@ -45,26 +45,88 @@ a:hover{
     /* display: none; */
     position: fixed;
     font-weight: 600;
-    
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
-    /* main style */
-.main{
+/* timer style */
+.pomodoro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.circle{
+    height: 270px;
+    width: 270px;
+    background-color: #6C4EB3;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid #f5f4f8;
+}
+.controls{
+    padding: 30px;  
+}
+#start{
+    margin-right: 60px;
+    width: 80px;
+}
+#stop{
+    margin-left: 70px;
+}
+#start,#stop{
+    font-size: 20px;
+    font-family: poppins;
+    border-radius: 10px;
+}
+#work-timer,#break-timer{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+#semicolon{
+    top: 10px;
+}
+/* .circle .wt{
+    display: none;
+} */
+.timer p{
+    color: white;
+}
+#work_minutes,#work_seconds,#semicolon,#break_minutes,#break_seconds{
+    font-size: 60px;
+}
+.wt,.bt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.active{
+    display: block;
+}
+.work,.break{
+    color: white;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-
-/* timer style */
-
-
-
-
-
-
+.btn{
+    padding: 5px 10px 5px 10px;
+}
+#reset{
+    color: white;
+    padding: 30px;
+    font-size: 35px;
+}
 
 /* music-player style */
 
@@ -95,7 +157,7 @@ a:hover{
 .add-note{
     width: 48px;
     height: 48px;
-    background-color: #664EFF;
+    background-color: transparent;
     display: flex;
     flex-direction: row-reverse;
     position: absolute;
@@ -113,8 +175,8 @@ a:hover{
 
 }
 #plus{
-    color: #FFFFFF;
-    font-size: 15px;
+    color: #664EFF;
+    font-size: 50px;
     transition: .2s ease-in;
-
+    
 }
