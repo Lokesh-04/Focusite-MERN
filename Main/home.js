@@ -14,8 +14,25 @@ document.getElementById("text").innerHTML = "pause"
    }    
 else{  document.getElementById("play").setAttribute("class","fa-solid fa-circle-pause")    
 song.play()  
-document.getElementById("text").innerHTML = "play"    
+document.getElementById("text").innerHTML = "play" 
+song.onended = function() {
+    if ( i == arr.length-1 ){
+        i = -1;
     }
+    else{
+        next()
+    }
+  };  
+    }
+
+    song.onended = function() {
+        if ( i == arr.length-1 ){
+            i = -1;
+        }
+        else{
+            next()
+        }
+      };
 })
 next.addEventListener("click", ()=>{
 if ( i == arr.length-1 ){
@@ -37,6 +54,9 @@ document.getElementById("song").setAttribute("src",arr[i])
 song=document.getElementById("song")    
 song.play()
 })
+
+
+
 //pomodoro timer js
 
 // buttons for adding event listeners on click
@@ -68,6 +88,7 @@ start.addEventListener('click', function(){
 })
 reset.addEventListener('click', function(){
     // reset needs to change everything to starting stage
+
     work_minutes.innerText = 25;
     work_seconds.innerText = "00";
 
@@ -92,15 +113,15 @@ function timer(){
     if(work_seconds.innerText != 0){
         work_seconds.innerText--;
     } else if(work_minutes.innerText != 0 && work_seconds.innerText == 0){
-        work_seconds.innerText = 2;
+        work_seconds.innerText = 59;
         work_minutes.innerText--;
     }
 
     //Break Timer Countdown
     if(work_minutes.innerText == 0 && work_seconds.innerText == 0){
-        doucument.getElementById("b_time").classList.add(" active")
-        doucument.getElementById("w_time").classList.remove("active")
-        
+        document.getElementById("b_time").classList.add("active")
+        document.getElementById("w_time").classList.remove("active")
+
         if(break_seconds.innerText != 0){
             break_seconds.innerText--;
         } else if(break_minutes.innerText != 0 && break_seconds.innerText == 0){
@@ -111,13 +132,20 @@ function timer(){
 
     //Increment Counter by one if one full cycle is completed
     if(work_minutes.innerText == 0 && work_seconds.innerText == 0 && break_minutes.innerText == 0 && break_seconds.innerText == 0){
+       
         work_minutes.innerText = 25;
         work_seconds.innerText = "00";
 
         break_minutes.innerText = 5;
         break_seconds.innerText = "00";
-
-        document.getElementById('counter').innerText++;
+        document.getElementById("b_time").classList.remove("active")
+        document.getElementById("w_time").classList.add("active")
+        // newlines
+        // added explains these 
+        // to teammates
+        stopInterval()
+        startTimer = undefined;
+        // document.getElementById('counter').innerText++;
     }
 }
 
