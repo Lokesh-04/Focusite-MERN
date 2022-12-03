@@ -98,7 +98,7 @@ function timer(){
 
     //Break Timer Countdown
     if(work_minutes.innerText == 0 && work_seconds.innerText == 0){
-        // doucument.getElementById("b_time").classList.add(" active")
+        doucument.getElementById("b_time").classList.add(" active")
         doucument.getElementById("w_time").classList.remove("active")
         
         if(break_seconds.innerText != 0){
