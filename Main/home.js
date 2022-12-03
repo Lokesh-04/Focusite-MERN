@@ -25,6 +25,8 @@ song.onended = function() {
   };  
     }
 
+
+    // make functions and then call functions 
     song.onended = function() {
         if ( i == arr.length-1 ){
             i = -1;
@@ -98,6 +100,10 @@ reset.addEventListener('click', function(){
     // document.getElementById('counter').innerText = 0;
     clearInterval(startTimer);
     startTimer = undefined;
+
+    // on clicking reset when in break time it should return to starting position
+    document.getElementById("b_time").classList.remove("active")
+        document.getElementById("w_time").classList.add("active")
 })
 
 stop.addEventListener('click', function(){
