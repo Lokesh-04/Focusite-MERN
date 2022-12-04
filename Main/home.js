@@ -1,12 +1,9 @@
 // music player js
-var play=document.getElementById("play")
-var next=document.getElementById("next")
-var prev=document.getElementById("prev")
 let song=document.getElementById("song")
 let arr=["audio1.mp3","audio2.mp3","audio3.mp3","audio4.mp3","audio5.mp3"]
 let length = arr.length
 let i=0
-play.addEventListener("click", ()=>{        
+function play(){        
 if ( document.getElementById("text").innerHTML == "play"){        
 document.getElementById("play").setAttribute("class","fa-solid fa-circle-play")        
 song.pause()        
@@ -23,39 +20,26 @@ song.onended = function() {
         next()
     }
   };  
-    }
-
-
-    // make functions and then call functions 
-    song.onended = function() {
-        if ( i == arr.length-1 ){
-            i = -1;
-        }
-        else{
-            next()
-        }
-      };
-})
-next.addEventListener("click", ()=>{
+// make functions and then call functions 
+}
+}
+function next(){
 if ( i == arr.length-1 ){
     i = -1
 }
 else{
     i=i+1
-// document.getElementById("song").setAttribute("src",arr[i].slice(0,4)+"\\"+arr[i].slice(4,14)+"\\"+arr[i].slice(14))
-
-
 document.getElementById("song").setAttribute("src",arr[i])    
 song=document.getElementById("song")    
 song.play()
 }
-})
-prev.addEventListener("click", ()=>{    
+}
+function prev(){    
 i=i-1
 document.getElementById("song").setAttribute("src",arr[i])    
 song=document.getElementById("song")    
 song.play()
-})
+}
 
 
 
@@ -159,4 +143,91 @@ function timer(){
 function stopInterval(){
     // this is to clear the interval set by the function set interval
     clearInterval(startTimer);
+}
+
+
+//notes js
+plus = document.getElementById("plus")
+plus.addEventListener('click',()=>{
+    document.getElementById("notes-div").classList.add("active")
+    document.getElementById("header").style.width = "80%"
+    document.getElementById("body").style.marginRight = "20%"
+
+})
+function noteshide(){
+    document.getElementById("notes-div").classList.remove("active")
+    document.getElementById("header").style.width = "100%"
+    document.getElementById("body").style.marginRight = "0"
+    
+}
+// real notes start here
+const notesContainer = document.getElementById("app");
+const addNoteButton = notesContainer.querySelector(".add-note");
+
+getNotes().forEach((note) => {
+  const noteElement = createNoteElement(note.id, note.content);
+  notesContainer.insertBefore(noteElement, addNoteButton);
+});
+
+addNoteButton.addEventListener("click", () => addNote());
+
+function getNotes() {
+  return JSON.parse(localStorage.getItem("stickynotes-notes") || "[]");
+}
+
+function saveNotes(notes) {
+  localStorage.setItem("stickynotes-notes", JSON.stringify(notes));
+}
+
+function createNoteElement(id, content) {
+  const element = document.createElement("textarea");
+
+  element.classList.add("note");
+  element.value = content;
+  element.placeholder = "Empty Sticky Note";
+
+  element.addEventListener("change", () => {
+    updateNote(id, element.value);
+  });
+
+  element.addEventListener("dblclick", () => {
+    const doDelete = confirm(
+      "Are you sure you wish to delete this sticky note?"
+    );
+
+    if (doDelete) {
+      deleteNote(id, element);
+    }
+  });
+
+  return element;
+}
+
+function addNote() {
+  const notes = getNotes();
+  const noteObject = {
+    id: Math.floor(Math.random() * 100000),
+    content: ""
+  };
+
+  const noteElement = createNoteElement(noteObject.id, noteObject.content);
+  notesContainer.insertBefore(noteElement, addNoteButton);
+
+  notes.push(noteObject);
+  saveNotes(notes);
+}
+
+function updateNote(id, newContent) {
+  const notes = getNotes();
+  const targetNote = notes.filter((note) => note.id == id)[0];
+
+  targetNote.content = newContent;
+  saveNotes(notes);
+}
+
+function deleteNote(id, element) {
+  const notes = getNotes().filter((note) => note.id != id);
+
+  saveNotes(notes);
+  notesContainer.removeChild(element);
 }
