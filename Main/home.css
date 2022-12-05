@@ -4,7 +4,7 @@
     margin: 0;
 }
 body{
-   background-color: #b0a8e1;
+   background-color: #DEF5E5;
    user-select: none;
 }
 /* scrollbar style */
@@ -18,13 +18,13 @@ body{
 }
 a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #504d4d;
     transition: .3s ease-in;
 }
 #home{
-    background-color: #6C4EB3;
+    background-color: #9ED5C5;
     border: none;
-    color: #FFFFFF;
+    color: #504d4d;
     font-size: 19px;
 }
 /* dont write style body or any universal tags 
@@ -54,7 +54,7 @@ a:hover{
     justify-content: space-between;
     width: 100%;
     height: 60px;
-    background-color: #6C4EB3;
+    background-color: #9ED5C5;
     /* display: none; */
     /* margin-right: 25%; */
     position: fixed;
@@ -81,15 +81,14 @@ a:hover{
 .circle{
     height: 270px;
     width: 270px;
-    background-color: #1F1B2E;
     border-radius: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 7px solid #f5f4f8;
-    background: linear-gradient(#664EFF,#6C4EB3,#1F1B2E);
-    /* filter: drop-shadow(5px 5px 100px rgba(143, 6, 241, 0.9)); */
+    background: linear-gradient(#9ED5C5,#8EC3B0);
+    filter: drop-shadow(5px 5px 100px #48ecb0);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .controls{
     padding: 30px;
@@ -114,7 +113,7 @@ a:hover{
     padding: 20px;
 }
 .timer p{
-    color: white;
+    color: #504d4d;
 }
 #work_minutes,#work_seconds,#semicolon,#break_minutes,#break_seconds{
     font-size: 60px;
@@ -130,7 +129,7 @@ a:hover{
     display: block;
 }
 .work,.break{
-    color: white;
+    color: #504d4d;
     font-size: 40px;
     display: flex;
     justify-content: center;
@@ -142,7 +141,7 @@ a:hover{
     border: none;
 }
 #reset{
-    color: rgb(124, 119, 119);
+    color: #363333;
     padding: 30px;
     font-size: 35px;
 }
@@ -161,7 +160,7 @@ a:hover{
 .music-controls i{
     font-size: 35px;
     padding: 0 20px 0 20px ;
-    color: #3700ff;
+    color: #504d4d;
     transition: .1s ease-in-out;
     filter: drop-shadow(6px,5px,5px);
     
@@ -175,7 +174,7 @@ a:hover{
     display: none;
 }
 /* style to plus button for adding notes  */
-.add-note{
+.plus_note{
     background-color: transparent;
     display: flex;
     flex-direction: row-reverse;
@@ -186,7 +185,7 @@ a:hover{
     justify-content: center;
     transition: .2s ease-in;
 } 
-.add-note:hover,#plus,#play:hover,#prev:hover,#next:hover{
+.plus_note:hover,#plus,#play:hover,#prev:hover,#next:hover{
     /* hover effect for plus button */
     transform: scale(1.1);
 
@@ -194,13 +193,13 @@ a:hover{
 .plus{
     color: #ffffff;
     transition: .2s ease-in;
-    background-color: #664EFF;
+    background-color: #504d4d;
     border: none;
     padding: 10px;
     font-size: 30px;
     border-radius: 7px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;

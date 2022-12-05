@@ -5,7 +5,7 @@ let length = arr.length
 let i=0
 function play(){        
 if ( document.getElementById("m_text").innerHTML == "play"){        
-document.getElementById("play").setAttribute("class","fa-solid fa-circle-play")        
+document.getElementById("play").setAttribute("class","fa-solid fa-circle-play")     
 song.pause()        
 document.getElementById("m_text").innerHTML = "pause"    
    }    

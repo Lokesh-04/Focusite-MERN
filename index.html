@@ -9,190 +9,84 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- sign-up box -->
+    <div class="signup-box" id="signup-box">
+        <h4>Sign Up</h4>
+        <i id="x-mark" onclick="signuphide()" class="fa-solid fa-xmark"></i>
+        
+        <form name="f1" action="Main\home.html"> 
+          <!-- there is some problem with method it is arising a http error 405 should think of this -->
+          <label>Username</label>
+          <input type="text" placeholder="" name="name">
+          <label>Email</label>
+          <input type="email" placeholder="" name="email">
+          <label>Password</label>
+          <input type="password" placeholder="" name="password">
+          <label>Confirm Password</label>
+          <input type="password" placeholder="" />
+          <!-- <input id="sign-up-submit" type="submit" value="Submit" /> -->
+          <input id="sign-up-submit" type="submit" value="Submit">
+         </form>
+        <p>
+            <!-- add terms and conditions & Privacy Policy html files -->
+          By clicking the Sign Up button,you agree to our <br />
+          <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+        </p>
+      </div>
+      <!-- login-box -->
+      <div class="login-box" id="login-box" method="post">
+        <h4>Login</h4>
+        <i id="x-mark" onclick="loginhide()" class="fa-solid fa-xmark"></i>
+        <form name="f2" action="Main\home.html">
+          <label>Email</label>
+          <input type="email" placeholder="" />
+          <label>Password</label>
+          <input type="password" placeholder="" />
+          <input id="login-submit" type="submit" value="Submit" />
+        </form>
+      </div>
+
+
     <div class="main" id="blur">
-        <div class="header">
+        <div class="nav">
         <button id="home"><h2>Focusite</h2></button>
          <div class="buttons">
             <button id="login" onclick="logintoggle()">Login</button>
             <button id="signup" onclick="signuptoggle()">Sign up</button>
          </div>
         </div>
-        
-        <!-- <div class="image-slider">
-
-
-        </div> -->
-
-
-        
-
-
-
-
-
-
-
-
-
+    
 
         <header>
-          <div class="container header-section flex">
-              <div class="header-left">
-                  <h1>Design Confidently</h1>
-                  <p>UsabilityHub is a remote user research platform that takes the guesswork out of design decisions by validating them with real users.</p>
-                  <a href="#" class="primary-button get-started-btn">Get Started</a>
-              </div>
-              <div class="header-right">
-                  <img src="" alt="hero image">
-              </div>
-          </div>
-      </header>
-    
-      <!-- companies section -->
-    
-      <section class="companies-section">
-          <div class="container">
-              <div class="small-bold-text companies-header">The world’s best companies rely on UsabilityHub to make better design decisions.</div>
-              <div class="logos flex">
-                  <img class="logo" src="./assets/asset 3.png" alt="">
-                  <img class="logo" src="./assets/asset 4.png" alt="">
-                  <img class="logo" src="./assets/asset 5.png" alt="">
-                  <img class="logo" src="./assets/asset 6.png" alt="">
-                  <img class="logo" src="./assets/asset 7.png" alt="">
-                  <img class="logo" src="./assets/asset 8.svg" alt="">
-                  <img class="logo" src="./assets/asset 9.png" alt="">
-              </div>
-          </div>
-      </section>
-    
-      <!-- features section -->
-    
-      <section class="features-section">
-          <div class="container">
-              <div class="features-header">
-                  <h2 class="features-heading-text">Your user research Swiss Army knife</h2>
-                  <a href="#" class="secondary-button">See all features <i class="fa-solid fa-right-long"></i></a>
-              </div>
-              <div class="features-area flex">
-                  <div class="features-card flex">
-                      <img src="./assets/asset 11.svg" alt="">
-                      <h3>Card Sorting</h3>
-                      <p>Discover how people group and label information.</p>
-                      <a href="#" class="secondary-button">Learn More <i class="fa-solid fa-right-long"></i></a>
-                  </div>
-                  <div class="features-card flex">
-                      <img src="./assets/asset 13.svg" alt="">
-                      <h3>Prototype tests</h3>
-                      <p>Discover how people navigate your Figma prototypes.</p>
-                      <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
-                  </div>
-                  <div class="features-card flex">
-                      <img src="./assets/asset 14.svg" alt="">
-                      <h3>First click tests</h3>
-                      <p>Test interaction with first click and navigation tests.</p>
-                      <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
-                  </div>
-                  <div class="features-card flex">
-                      <img src="./assets/asset 15.svg" alt="">
-                      <h3>Design surveys</h3>
-                      <p>Get feedback on images, videos or audio files.</p>
-                      <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
-                  </div>
-                  <div class="features-card flex">
-                      <img src="./assets/asset 16.svg" alt="">
-                      <h3>Preference tests</h3>
-                      <p>Find out which designs users prefer and why.</p>
-                      <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
-                  </div>
-                  <div class="features-card flex">
-                      <img src="./assets/asset 17.svg" alt="">
-                      <h3>Five second tests</h3>
-                      <p>Test comprehensibility by measuring first impressions.</p>
-                      <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
-                  </div>
-              </div>
-          </div>
-      </section>
-    
-      <!-- big features section -->
-    
-      <section class="big-feature-section">
-          <div class="container flex big-feature-container">
-              <div class="feature-img">
-                  <img src="./assets/asset 18.png" alt="">
-              </div>
-              <div class="feature-desc flex">
-                  <h4>Effortless validation for</h4>
-                  <h3>Design professionals</h3>
-                  <p>Test interfaces, interaction flows, iconography and more, to help you create intuitive and delightful experiences for your users.</p>
-              </div>
-          </div>
-      </section>
-      
-      <section class="big-feature-section">
-          <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
-              <div class="feature-img">
-                  <img src="./assets/asset 21.png" alt="">
-              </div>
-              <div class="feature-desc flex">
-                  <h4>Effortless validation for</h4>
-                  <h3>Design professionals</h3>
-                  <p>Test interfaces, interaction flows, iconography and more, to help you create intuitive and delightful experiences for your users.</p>
-              </div>
-          </div>
-      </section>
-    
-      <section class="big-feature-section">
-          <div class="container flex big-feature-container">
-              <div class="feature-img">
-                  <img src="./assets/asset 24.png" alt="">
-              </div>
-              <div class="feature-desc flex">
-                  <h4>Effortless validation for</h4>
-                  <h3>Design professionals</h3>
-                  <p>Test interfaces, interaction flows, iconography and more, to help you create intuitive and delightful experiences for your users.</p>
-              </div>
-          </div>
-      </section>
-    
-      <!-- examples section -->
-    
-      <section class="examples-section">
-          <div class="container">
-              <div class="examples-header flex">
-                  <h2 class="examples-heading-text">One platform, endless possibilities</h2>
-                  <a href="#" class="secondary-button">See more examples <i class="fa-solid fa-right-long"></i></a>
-              </div>
-              <div class="examples-area flex">
-                  <a href="#" class="examples-card">
-                      <h3 class="card-text">Can user complete a task in my software interface?</h3>
-                  </a>
-                  <a class="examples-card" href="#" style="background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(./assets/asset\ 34.jpeg); background-size: cover;">
-                      <h3 class="card-text">Can users find important pages on my website?</h3>
-                  </a>
-                  <a class="examples-card" href="#">
-                      <h3 class="card-text">Is my website’s intended audience clear? </h3>
-                  </a>
-                  <a class="examples-card" href="#">
-                      <h3 class="card-text">Do visitors understand what a page is about?</h3>
-                  </a>
-              </div>
-          </div>
-      </section>
-    
-      <!-- cta section -->
-    
-      <section class="cta-section">
-          <div class="container flex cta-section-container">
-              <h2>Start testing today</h2>
-              <p>Take the guesswork out of design decisions</p>
-              <a href="#" class="primary-button">Get Started</a>
-          </div>
-      </section>
+            <div class="header">
+                <h2><span style="font-size: 80px;color: #6242d8;" >Turn on</span> <br> <i>focus mode</i>  <br> <i>with</i>  <br> <span style="font-size: 80px;color: #6242d8;" >Focusite</span></h2>
+                <div class="buttons">
+                    <button class="explore">Explore!</button>
+                    <button class="now">Sign up now</button>
+                </div>
+            </div>
+  
+            <div class="image">
+                <img src="images\header.png">
+            </div>
+          
+        </header>
+
+        <div class="features">
+            <div class="box">
+                
+            </div>
+            <div class="box">
+                
+            </div>
+            <div class="box">
+                
+            </div>
+        </div>
     
       <!-- footer -->
     
-      <footer>
+      <!-- <footer>
           <div class="container flex footer-container">
               <a href="#" class="company-logo">
                   <img src="./assets/asset 1.png" alt="company logo">
@@ -222,11 +116,11 @@
                   <a href="#" class="hover-link">Status Page</a>
               </div>
           </div>
-      </footer>
+      </footer> -->
     
       <!-- subfooter -->
     
-      <div class="subfooter">
+      <!-- <div class="subfooter">
           <div class="container flex subfooter-container">
               <a class="hover-link" href="#">Privacy policy</a>
               <a class="hover-link" href="#">Terms & Condition</a>
@@ -234,75 +128,14 @@
               <a class="hover-link" href="#"><i class="fa-brands fa-facebook"></i></a>
               <a class="hover-link" href="#"><i class="fa-brands fa-twitter"></i></a>
           </div>
-      </div>
+      </div> -->
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
     <!-- main div ending -->
     
 
 
-     <!-- sign-up box -->
-        <div class="signup-box" id="signup-box">
-        <h1>Sign Up</h1>
-        <i id="x-mark" onclick="signuphide()" class="fa-solid fa-xmark"></i>
-        
-        <form name="f1" action="Main\home.html"> 
-          <!-- there is some problem with method it is arising a http error 405 should think of this -->
-          <label>Username</label>
-          <input type="text" placeholder="" name="name">
-          <label>Email</label>
-          <input type="email" placeholder="" name="email">
-          <label>Password</label>
-          <input type="password" placeholder="" name="password">
-          <label>Confirm Password</label>
-          <input type="password" placeholder="" />
-          <!-- <input id="sign-up-submit" type="submit" value="Submit" /> -->
-          <input id="sign-up-submit" type="submit" value="Submit">
-         </form>
-        <p>
-            <!-- add terms and conditions & Privacy Policy html files -->
-          By clicking the Sign Up button,you agree to our <br />
-          <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
-        </p>
-      </div>
-      <!-- login-box -->
-      <div class="login-box" id="login-box" method="post">
-        <h1>Login</h1>
-        <i id="x-mark" onclick="loginhide()" class="fa-solid fa-xmark"></i>
-        <form name="f2" action="Main\home.html">
-          <label>Email</label>
-          <input type="email" placeholder="" />
-          <label>Password</label>
-          <input type="password" placeholder="" />
-          <input id="login-submit" type="submit" value="Submit" />
-        </form>
-      </div>
+     
      
     <!-- add sections about explaining our features 
     take github login page as inspiration -->
