@@ -4,8 +4,17 @@
     margin: 0;
 }
 body{
-   background-color: #ffffff;
+   background-color: #b0a8e1;
    user-select: none;
+}
+/* scrollbar style */
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: rgb(232, 227, 227);
 }
 a{
     text-decoration: none;
@@ -79,12 +88,12 @@ a:hover{
     justify-content: center;
     align-items: center;
     border: 7px solid #f5f4f8;
-    background: linear-gradient(purple,black);
-    filter: drop-shadow(6px 16px 20px rgb(148, 148, 207));
+    background: linear-gradient(#664EFF,#6C4EB3,#1F1B2E);
+    /* filter: drop-shadow(5px 5px 100px rgba(143, 6, 241, 0.9)); */
 }
 .controls{
     padding: 30px;
-    filter: opacity(50%);
+    filter: drop-shadow(3px 3px 6px);
 }
 #start{
     margin-right: 60px;
@@ -133,7 +142,7 @@ a:hover{
     border: none;
 }
 #reset{
-    color: white;
+    color: rgb(124, 119, 119);
     padding: 30px;
     font-size: 35px;
 }
@@ -152,8 +161,9 @@ a:hover{
 .music-controls i{
     font-size: 35px;
     padding: 0 20px 0 20px ;
-    color: #664EFF;
+    color: #3700ff;
     transition: .1s ease-in-out;
+    filter: drop-shadow(6px,5px,5px);
     
 }
 #play{
@@ -161,7 +171,7 @@ a:hover{
     transition: .1s ease-in-out;
     /* background: white; */
 }
-#text{
+#m_text{
     display: none;
 }
 /* style to plus button for adding notes  */
@@ -208,6 +218,7 @@ a:hover{
     display: none;
     transition: .3s ease-in;
     overflow-x: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .active{
     display: block;
@@ -222,7 +233,7 @@ a:hover{
     align-items: center;
     padding-left: 7px;
     border: 1px solid rgb(205, 201, 201);
-    position: relative;
+    margin-bottom: 5px;
 }
 .notes-nav{
     position: absolute;
@@ -241,10 +252,12 @@ a:hover{
     font-size: 22px;
 }
 .notes-main{
-    padding: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
+    
 }
 #add-note{
     background-color: transparent;
@@ -267,19 +280,31 @@ a:hover{
     font-size: 17px;
 }
 .note-foot{
-    height: 30px;
+    height: 50px;
     width: 100%;
     background-color: #1F1B2E;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
 }
 /* style for note */
+
+.one-note{
+    width: 88%;
+    height: 130px;
+    padding: 10px;
+    margin: 3px 10px 3px 10px;
+    border-radius: 5px;
+    background-color: rgb(235, 228, 228);
+}
 textarea{
     outline: none;
-    border: 2px solid rgb(233, 229, 229);
-    width: 100%;
-    height: 150px;
-    padding: 5px;
-    margin: 3px;
-    border-radius: 5px;
+    border: 1px solid rgb(225, 221, 221);
+    width: 88%;
+    height: 130px;
+    padding: 10px;
     font-size: 18px;
+    resize: none; margin: 3px 10px 3px 10px;
+    border-radius: 5px;
 }
 

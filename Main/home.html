@@ -64,7 +64,7 @@
                 <div class="music-controls">
                     <i id="prev" onclick="prev()" class="fa-solid fa-backward-step"></i>
                     <i id="play" onclick="play()" class="fa-solid fa-circle-play">
-                        <p id="text">play</p>
+                        <p id="m_text">play</p>
                     </i>
                     <i id="next" onclick="next()" class="fa-solid fa-forward-step"></i>
                 </div>
@@ -80,7 +80,7 @@
 
             <div class="notes-div" id="notes-div">
                 <div class="notes-header">
-                    <div class="text">
+                    <div class="name">
                         <p id="co">FOCUSITE</p>
                         <p id="head">Notes</p>
                     </div>
@@ -89,24 +89,10 @@
                         <i id="x-mark" onclick="noteshide()" class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-                <!-- <div class="notes-main">
-                    <button class="add-note" id="add-note"><i id="sharp-plus" class="fa-sharp fa-solid fa-plus"></i>Take a note...</button>
-
-                    <div class="note-div">
-                        <i id="del" class="fa-solid fa-trash"></i>
-                        <textarea class="note"></textarea>
-                    </div>
-
-                </div> -->
                 <div id="notes-main">
                     <!-- <button class="add-note" type="button">+</button> -->
                     <button class="addnote" id="add-note"><i id="sharp-plus" class="fa-sharp fa-solid fa-plus"></i>Take a note...</button>
-                <div class="note-foot">
-                    <div class="notes">
-                        <div class="add-note">
-                            <button id="plus" class="plus">+</button>
-                        </div>
-                </div>
+
                 </div>
 
             </div>
@@ -119,3 +105,5 @@
 </body>
 
 </html>
+
+<textarea class="note"></textarea>

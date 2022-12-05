@@ -4,14 +4,14 @@ let arr=["audio1.mp3","audio2.mp3","audio3.mp3","audio4.mp3","audio5.mp3"]
 let length = arr.length
 let i=0
 function play(){        
-if ( document.getElementById("text").innerHTML == "play"){        
+if ( document.getElementById("m_text").innerHTML == "play"){        
 document.getElementById("play").setAttribute("class","fa-solid fa-circle-play")        
 song.pause()        
-document.getElementById("text").innerHTML = "pause"    
+document.getElementById("m_text").innerHTML = "pause"    
    }    
 else{  document.getElementById("play").setAttribute("class","fa-solid fa-circle-pause")    
 song.play()  
-document.getElementById("text").innerHTML = "play" 
+document.getElementById("m_text").innerHTML = "play" 
 song.onended = function() {
     if ( i == arr.length-1 ){
         i = -1;
@@ -24,6 +24,9 @@ song.onended = function() {
 }
 }
 function next(){
+  if(document.getElementById("m_text").innerHTML == "pause"){
+    document.getElementById("play").setAttribute("class","fa-solid fa-circle-pause")
+  }
 if ( i == arr.length-1 ){
     i = -1
 }
@@ -36,6 +39,9 @@ song.play()
 }
 function prev(){    
 i=i-1
+if(document.getElementById("m_text").innerHTML == "pause"){
+  document.getElementById("play").setAttribute("class","fa-solid fa-circle-pause")
+}
 document.getElementById("song").setAttribute("src",arr[i])    
 song=document.getElementById("song")    
 song.play()
@@ -101,10 +107,21 @@ stop.addEventListener('click', function(){
 function timer(){
     //Work Timer Countdown
     if(work_seconds.innerText != 0){
+      if ( work_seconds.innerText <= 10 ) {
+        work_seconds.innerText = "0" + (work_seconds.innerText - 1);
+        
+      } else {
         work_seconds.innerText--;
+      }
+        
     } else if(work_minutes.innerText != 0 && work_seconds.innerText == 0){
-        work_seconds.innerText = 59;
+      if ( work_minutes.innerText <= 10 ) {
+        work_minutes.innerText = "0" + (work_minutes.innerText - 1);
+        
+      } else {
         work_minutes.innerText--;
+      }
+        work_seconds.innerText = 59;
     }
 
     //Break Timer Countdown
@@ -113,10 +130,21 @@ function timer(){
         document.getElementById("w_time").classList.remove("active")
 
         if(break_seconds.innerText != 0){
+          if ( break_seconds.innerText <= 10 ) {
+            break_seconds.innerText = "0" + (break_seconds.innerText - 1);
+            
+          } else {
             break_seconds.innerText--;
+          }
+
         } else if(break_minutes.innerText != 0 && break_seconds.innerText == 0){
-            break_seconds.innerText = 59;
+          if ( break_minutes.innerText <= 10 ) {
+            break_minutes.innerText = "0" + (break_minutes.innerText - 1);
+            
+          } else {
             break_minutes.innerText--;
+          }
+            break_seconds.innerText = 59;
         }
     }
 
@@ -132,7 +160,7 @@ function timer(){
         document.getElementById("w_time").classList.add("active")
         // newlines
         // added explains these 
-        // to teammates
+        // to teammates......done explaining
         stopInterval()
         startTimer = undefined;
         // document.getElementById('counter').innerText++;
@@ -147,6 +175,8 @@ function stopInterval(){
 
 
 //notes js
+
+// window.onload = function(){text.focus()}
 plus = document.getElementById("plus")
 plus.addEventListener('click',()=>{
     document.getElementById("notes-div").classList.add("active")
@@ -171,20 +201,29 @@ getNotes().forEach((note) => {
 
 addNoteButton.addEventListener("click", () => addNote());
 
+//this fun() retrieve all existing notes from localstorage in the clients browser
 function getNotes() {
-  return JSON.parse(localStorage.getItem("stickynotes-notes") || "[]");
+  return JSON.parse(localStorage.getItem("Focusite-notes") || "[]");
 }
 
+//take in array of notes and save the new notes in the clients browser
 function saveNotes(notes) {
-  localStorage.setItem("stickynotes-notes", JSON.stringify(notes));
+  localStorage.setItem("Focusite-notes", JSON.stringify(notes));
 }
 
+//for building html element we provide id and content
+//id is a unique identifier for every single notes
 function createNoteElement(id, content) {
   const element = document.createElement("textarea");
+  // const main = document.createElement("div");
 
   element.classList.add("note");
   element.value = content;
-  element.placeholder = "Empty Sticky Note";
+  // element.autofocus = "autofocus";
+  element.placeholder = "Take a note...";
+
+  // main.classList.add("one-note")
+  // main.innerHTML = element;
 
   element.addEventListener("change", () => {
     updateNote(id, element.value);
@@ -192,7 +231,7 @@ function createNoteElement(id, content) {
 
   element.addEventListener("dblclick", () => {
     const doDelete = confirm(
-      "Are you sure you wish to delete this sticky note?"
+      "Are you sure you wish to delete this note?"
     );
 
     if (doDelete) {
@@ -203,8 +242,10 @@ function createNoteElement(id, content) {
   return element;
 }
 
+
+// add note to html and add it to the localstorage 
 function addNote() {
-  const notes = getNotes();
+  const newnotes = getNotes();
   const noteObject = {
     id: Math.floor(Math.random() * 100000),
     content: ""
@@ -212,11 +253,12 @@ function addNote() {
 
   const noteElement = createNoteElement(noteObject.id, noteObject.content);
   notesContainer.insertBefore(noteElement, addNoteButton);
-
-  notes.push(noteObject);
-  saveNotes(notes);
+  newnotes.push(noteObject);
+  saveNotes(newnotes);
 }
 
+
+//update the notes instead of adding new one
 function updateNote(id, newContent) {
   const notes = getNotes();
   const targetNote = notes.filter((note) => note.id == id)[0];
@@ -225,9 +267,12 @@ function updateNote(id, newContent) {
   saveNotes(notes);
 }
 
+//to delete note
 function deleteNote(id, element) {
   const notes = getNotes().filter((note) => note.id != id);
 
   saveNotes(notes);
   notesContainer.removeChild(element);
 }
+
+
