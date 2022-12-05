@@ -4,7 +4,7 @@
     margin: 0;
 }
 body{
-   background-color: #1F1B2E;
+   background-color: #ffffff;
    user-select: none;
 }
 a{
@@ -80,10 +80,11 @@ a:hover{
     align-items: center;
     border: 7px solid #f5f4f8;
     background: linear-gradient(purple,black);
-    
+    filter: drop-shadow(6px 16px 20px rgb(148, 148, 207));
 }
 .controls{
-    padding: 30px;  
+    padding: 30px;
+    filter: opacity(50%);
 }
 #start{
     margin-right: 60px;
@@ -207,14 +208,13 @@ a:hover{
     display: none;
     transition: .3s ease-in;
     overflow-x: hidden;
-    background-color: #545068;
 }
 .active{
     display: block;
 }
 .notes-header{
-    background-color: #100F5B;
-    color: white;
+    background-color: white;
+    color: black;
     height: 60px;
     width: 100%;
     display: flex;
@@ -244,48 +244,42 @@ a:hover{
     padding: 5px;
     display: flex;
     flex-direction: column;
-    background-color: #545068;
-    
-
+    background-color: #ffffff;
 }
-.take-note{
-    height: 25px;
-    border-radius: 30px;
+#add-note{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    padding: 5px;
-    margin: 10px;
-
+    border-radius: 30px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
 }
-
-.take-note #sharp-plus{
-    padding: 0 10px 0 10px;
-    font-size: 18px;
-    color: orange;
+#add-note:hover{
+   background-color: rgb(230, 226, 226);
 }
-.take-note #take{
+#sharp-plus{
+    padding: 10px;
     font-size: 17px;
-    color: rgb(130, 124, 124);
+}
+.note-foot{
+    height: 30px;
+    width: 100%;
+    background-color: #1F1B2E;
 }
 /* style for note */
-.one{
-    height: 200px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    position: relative;
-}
-.one #del{
-    position: absolute;
-    right: 7px;
-    top: 7px;
-}
-.one .note{
-    position: absolute;
-    top: 28px;
-    overflow-wrap: normal;
-    height: 180px;
+textarea{
+    outline: none;
+    border: 2px solid rgb(233, 229, 229);
     width: 100%;
+    height: 150px;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 18px;
 }
+

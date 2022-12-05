@@ -161,8 +161,8 @@ function noteshide(){
     
 }
 // real notes start here
-const notesContainer = document.getElementById("app");
-const addNoteButton = notesContainer.querySelector(".add-note");
+const notesContainer = document.getElementById("notes-main");
+const addNoteButton = notesContainer.querySelector(".addnote");
 
 getNotes().forEach((note) => {
   const noteElement = createNoteElement(note.id, note.content);
