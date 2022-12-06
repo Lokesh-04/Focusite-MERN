@@ -3,28 +3,42 @@
     margin: 0;
 }
 body{
-   background-color: #ffffff;
+   background-color: #161616;
    user-select: none;
+   transition: margin-right .3s ease-in-out;
 }
 /* scrollbar style */
 ::-webkit-scrollbar{
     width: 10px;
-    background-color: transparent;
+    background-color: #dad1d1;
 }
 ::-webkit-scrollbar-thumb{
     width: 10px;
-    background-color: rgb(232, 227, 227);
+    
+   background-color: #6C63FF;
 }
-a{
+button{
+    cursor: pointer;
+}
+.li{
     text-decoration: none;
-    color: #504d4d;
+    color: #d7d1d1;
     transition: .3s ease-in;
 }
+.active{
+    color: white;
+    text-underline-position: below;
+
+}
 #home{
-    background-color: #9ED5C5;
+    background-color: #2B2A2A;
     border: none;
-    color: #504d4d;
+    color: #d7d1d1;
     font-size: 19px;
+}
+#home:hover{
+    color: white;
+
 }
 /* dont write style body or any universal tags 
 write style for unique ones as every page has 
@@ -41,23 +55,24 @@ ul li{
     padding: 0 10px 0 10px;
 }
 a:hover{
-    color: #c7bae9;
+    color: white;
     
 }
-.header h2{
+.nav h2{
     padding: 0 50px;
     margin: 10px ;
 }
-.header{
+.nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 60px;
-    background-color: #9ED5C5;
+    height: 70px;
+    background-color: #2B2A2A;
     /* display: none; */
     /* margin-right: 25%; */
     position: fixed;
     font-weight: 600;
+    transition: width .3s ease-in-out;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     /* font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; */
 }
@@ -78,33 +93,57 @@ a:hover{
 
 }
 .circle{
-    height: 270px;
-    width: 270px;
+    height: 280px;
+    width: 280px;
     border-radius: 50%;
+    /* border-radius: 61% 54% 33% 59% / 63% 14% 68% 28% ; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#9ED5C5,#8EC3B0);
-    filter: drop-shadow(5px 5px 100px #48ecb0);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.controls{
-    padding: 30px;
-    filter: drop-shadow(3px 3px 6px);
-}
-#start{
-    margin-right: 60px;
-    width: 80px;
+    background-color: #2B2A2A;
+    margin: 15px;
+    /* background: linear-gradient(to bottom, #6c63ff 0%, #cc6699 100%); */
+    filter: drop-shadow(0 0 0.75rem #736ed5);
 
 }
-#stop{
-    margin-left: 70px;
+.controls{
+    width: 200px;
+    height: 40px;
+    background-color: #2B2A2A;
+    position: relative;
+    margin: 35px;
+    border-radius: 30px;
 }
-#start,#stop{
+.controls button{
+    color: white;
+    position: absolute;
+    background-color: transparent;
+    right: 0;
     font-size: 20px;
-    font-family: poppins;
-    border-radius: 10px;
+    margin-top: 3px;
+    padding-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#start{
+    left: 0;
+    margin-right: 120px;
+    padding-left: 30px;
+}
+#stop{
+    padding-right: 20px;
+}
+.toggle{
+    width: 100px;
+    height: 40px;
+    background-color: #6C63FF;
+    position: absolute;
+    left: 100px;
+    border-radius: 30px;
+    transition: left .3s ease-in;
+
 }
 #work-timer,#break-timer{
     display: flex;
@@ -112,7 +151,7 @@ a:hover{
     padding: 20px;
 }
 .timer p{
-    color: #504d4d;
+    color: #ffffff;
 }
 #work_minutes,#work_seconds,#semicolon,#break_minutes,#break_seconds{
     font-size: 60px;
@@ -128,7 +167,7 @@ a:hover{
     display: block;
 }
 .work,.break{
-    color: #504d4d;
+    color: #ffffff;
     font-size: 40px;
     display: flex;
     justify-content: center;
@@ -140,7 +179,7 @@ a:hover{
     border: none;
 }
 #reset{
-    color: #363333;
+    color: #6C63FF;
     padding: 30px;
     font-size: 35px;
 }
@@ -159,7 +198,7 @@ a:hover{
 .music-controls i{
     font-size: 35px;
     padding: 0 20px 0 20px ;
-    color: #504d4d;
+    color: #6C63FF;
     transition: .1s ease-in-out;
     filter: drop-shadow(6px,5px,5px);
     
@@ -187,12 +226,13 @@ a:hover{
 .plus_note:hover,#plus,#play:hover,#prev:hover,#next:hover{
     /* hover effect for plus button */
     transform: scale(1.1);
+    color: white;
 
 }
 .plus{
-    color: #ffffff;
+    color: #d7d1d1;
     transition: .2s ease-in;
-    background-color: #504d4d;
+    background-color: #6C63FF;
     border: none;
     padding: 10px;
     font-size: 30px;
@@ -208,31 +248,28 @@ a:hover{
 .notes-div{
     width: 20%;
     height: 100%;
-    background-color: #FFFFFF;
     position: absolute;
     right: 0;
     bottom: 0;
     overflow: scroll;
     display: none;
-    transition: .3s ease-in;
     overflow-x: hidden;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .active{
     display: block;
+    transition: width 1s ease-in-out;
+
 }
 .notes-header{
-    background-color: white;
-    color: black;
-    height: 60px;
+    background-color: #2B2A2A;
+    color: white;
+    height: 70px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 7px;
-    border: 1px solid rgb(205, 201, 201);
-    margin-bottom: 5px;
-    position: cover;
+    padding-left: 10px;
 }
 .notes-nav{
     position: absolute;
@@ -255,8 +292,7 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
-    
+    background-color: #2B2A2A;
 }
 #add-note{
     background-color: transparent;
@@ -298,12 +334,14 @@ a:hover{
 }
 textarea{
     outline: none;
-    border: 1px solid rgb(225, 221, 221);
+    border: 1px solid rgb(53, 51, 51);
     width: 88%;
     height: 130px;
     padding: 10px;
     font-size: 18px;
     resize: none; margin: 3px 10px 3px 10px;
     border-radius: 5px;
+    background-color: #2B2A2A;
+    color: #d7d1d1;
 }
 

@@ -12,15 +12,15 @@
 
 <body id="body">
     <!-- header -->
-    <div class="header" id="header">
+    <div class="nav" id="nav">
         <button id="home">
             <h2>Focusite</h2>
         </button>
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="notes.html">Notes</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="aboutus.html">About us</a></li>
+            <li><a class="li active" href="home.html">Home</a></li>
+            <li><a class="li" href="notes.html">Notes</a></li>
+            <li><a class="li" href="contact.html">Contact</a></li>
+            <li><a class="li" href="aboutus.html">About us</a></li>
         </ul>
     </div>
 
@@ -28,8 +28,17 @@
         <div class="center">
             <div class="pomodoro">
                 <div class="controls">
-                    <button id="start" class="btn">start</button>
-                    <button id="stop" class="btn">Pause</button>
+                    <div id="toggle" class="toggle"></div>
+                    <button id="start" class="btn">Start</button>
+                    <button id="stop" class="btn">Pause</button>   
+                    <!-- <div class="form-box">
+                        <div class="button-box">
+                            <div id="btn"></div>
+                            <button type="button" id="start" class="toggle-btn" onclick="leftClick()">Left</button>
+                            <button type="button" id="stop" class="toggle-btn" onclick="rightClick()">Right</button>
+                        </div>
+                    </div> -->
+                    
                 </div>
                 <!-- <p id="cycles" class="cycles">Cycles:</p> -->
                 <!--Work Timer-->

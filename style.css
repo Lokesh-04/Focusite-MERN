@@ -3,8 +3,17 @@
     margin: 0;
 }
 body{
-  background-color: rgb(22, 22, 22);
+  background-color: #161616;
   user-select: none;
+}
+/* scrollbar style */
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  width: 10px;
+  background-color: #6C63FF;
 }
 #home{
     background-color: #2B2A2A;
@@ -17,7 +26,7 @@ body{
 
 }
 .main#blur.active{
-  filter: blur(20px);
+  filter: blur(100px);
   pointer-events: none;
   user-select: none;
 
@@ -231,16 +240,16 @@ header{
 header .pic{
   width: 300px;
   height: 300px;
-  padding: 20px;
   position: absolute;
-  top: 90px;
+  margin-right: 40px;
+  top: 100px;
   right: 600px;
 }
 header .line{
   color: white;
   position: absolute;
-  top: 90px;
-  left: 100px;
+  top: 120px;
+  left: 130px;
   
 }
 .features{
@@ -248,34 +257,81 @@ header .line{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 330vh;
+  margin-top: 620px;
+  padding: 50px 0 20px 0;
+}
+.features h3{
+  padding:0 0 40px 0;
 }
 .box1,.box2,.box3{
   width: 70%;
   background-color: #2B2A2A;
-  height: 300px;
+  height: 280px;
   border-radius: 10px;
   margin: 30px;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: .4s ease-in-out;
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;} */
+}
+.box1 img,.box2 img,.box3 img{
+  height: 280px;
+  width: 320px;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  left: 0;
+}
+.features .lines{
+  padding: 10px;
+}
+/* .box1.lines,.box2.lines,.box3.lines{
+  wid
+} */
+.features .lines{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  position: absolute;
+  left: 390px;
+  top: 15px;
+}
+.features .lines i{
+  color: white;
+  font-size: 20px;
+}
+.features .lines h3{
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  padding: 15px;
   transition: .4s ease-in-out;
-
 }
-.features h3{
-  padding: 0 0 20px 0;
-}
-.box1.pic,.box2.pic,.box3.pic{
-  width: 30%;
-  height: 100%;
-}
-.box1.lines,.box2.lines,.box3.lines{
-  width: 70%;
-
+/* .features .lines ul{
+  
+} */
+.features .lines ul li{
+  color: white;
+  font-size: 20px;
+  padding: 7px;
+  transition: .4s ease-in-out;
 }
 .box1:hover,.box2:hover,.box3:hover{
   transform: scale(1.05);
 
 }
+.origin{
+  display: flex;
+  flex-direction: row;
+  height: 200vh;
+}
+.vbox1,.vbox2,.vbox3{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: 500px;
+  background-color: #2B2A2A;
+  border-radius: 1--}

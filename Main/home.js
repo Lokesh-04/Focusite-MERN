@@ -1,3 +1,8 @@
+//onclick logo -> home page direct
+const home = document.getElementById("home");
+home.addEventListener('click',()=>{
+  location.replace("home.html")
+})
 // music player js
 let song=document.getElementById("song")
 let arr=["audio1.mp3","audio2.mp3","audio3.mp3","audio4.mp3","audio5.mp3"]
@@ -69,14 +74,18 @@ var break_seconds = document.getElementById('break_seconds');
 var startTimer;
 
 start.addEventListener('click', function(){
-
+  if(start.innerHTML == "Resume"){
+    start.innerHTML = "Start"
+  }
     if(startTimer === undefined){
-        // setinterval is used to execute this code with specific speed 1000 = 1s
-        startTimer = setInterval(timer, 1000)
-    } else {
-        // if this is not mentioned then timer will run fast by clicking start button continuously
-        alert("venu timer is already running");
-    }
+      // setinterval is used to execute this code with specific speed 1000 = 1s
+      startTimer = setInterval(timer, 1000)
+  } else {
+      // if this is not mentioned then timer will run fast by clicking start button continuously
+      alert("venu timer is already running");
+  }
+
+  document.getElementById("toggle").style.left = "0"
 })
 reset.addEventListener('click', function(){
     // reset needs to change everything to starting stage
@@ -94,12 +103,22 @@ reset.addEventListener('click', function(){
     // on clicking reset when in break time it should return to starting position
     document.getElementById("b_time").classList.remove("active")
         document.getElementById("w_time").classList.add("active")
+        document.getElementById("toggle").style.left = "100px"
+
+
 })
 
 stop.addEventListener('click', function(){
+    
+    if ( work_minutes != 25 ){
+      
     stopInterval()
     startTimer = undefined;
+    start.innerHTML = "Resume"
     // document.getElementById("stop")
+    document.getElementById("toggle").style.left = "100px"
+    }
+    
 })
 
 
@@ -172,6 +191,17 @@ function stopInterval(){
     // this is to clear the interval set by the function set interval
     clearInterval(startTimer);
 }
+//toggle switch code for timer
+// var btn = document.getElementById('btn')
+
+// function leftClick() {
+// 	btn.style.left = '0'
+// }
+
+// function rightClick() {
+// 	btn.style.left = '110px'
+// }
+
 
 
 //notes js
@@ -180,13 +210,13 @@ function stopInterval(){
 plus = document.getElementById("plus")
 plus.addEventListener('click',()=>{
     document.getElementById("notes-div").classList.add("active")
-    document.getElementById("header").style.width = "80%"
+    document.getElementById("nav").style.width = "80%"
     document.getElementById("body").style.marginRight = "20%"
 
 })
 function noteshide(){
     document.getElementById("notes-div").classList.remove("active")
-    document.getElementById("header").style.width = "100%"
+    document.getElementById("nav").style.width = "100%"
     document.getElementById("body").style.marginRight = "0"
     
 }
