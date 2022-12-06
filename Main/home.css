@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');*{
     padding: 0;
     margin: 0;
 }
 body{
-   background-color: #DEF5E5;
+   background-color: #ffffff;
    user-select: none;
 }
 /* scrollbar style */
@@ -60,7 +59,7 @@ a:hover{
     position: fixed;
     font-weight: 600;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    /* font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; */
 }
 /* main style consists of timer and notes */
 .main{
@@ -233,6 +232,7 @@ a:hover{
     padding-left: 7px;
     border: 1px solid rgb(205, 201, 201);
     margin-bottom: 5px;
+    position: cover;
 }
 .notes-nav{
     position: absolute;
