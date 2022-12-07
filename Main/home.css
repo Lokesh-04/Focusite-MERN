@@ -5,7 +5,7 @@
 body{
    background-color: #161616;
    user-select: none;
-   transition: margin-right .3s ease-in-out;
+   /* transition: margin-right .3s ease-in-out; */
 }
 /* scrollbar style */
 ::-webkit-scrollbar{
@@ -20,16 +20,6 @@ body{
 button{
     cursor: pointer;
 }
-.li{
-    text-decoration: none;
-    color: #d7d1d1;
-    transition: .3s ease-in;
-}
-.active{
-    color: white;
-    text-underline-position: below;
-
-}
 #home{
     background-color: #2B2A2A;
     border: none;
@@ -43,20 +33,46 @@ button{
 /* dont write style body or any universal tags 
 write style for unique ones as every page has 
 one css file linked */
+
+.list.active{
+    border: 2px solid #6C63FF;
+    padding: 5px;
+    border-radius: 5px;
+}
+li a{
+    text-decoration: none;
+    color: #d7d1d1;
+}
 ul{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
-    font-size: 18px;
+    font-size: 16px;
 }
 ul li{
     list-style: none;
     padding: 0 10px 0 10px;
 }
+li a::after{
+    content: '';
+    width: 0;
+    height: 2.5px;
+    background-color: #6C63FF;
+    margin: .7px;
+    display: block;
+    
+}
+a{
+    font-family: sans-serif;
+}
 a:hover{
     color: white;
-    
+}
+li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+
 }
 .nav h2{
     padding: 0 50px;
@@ -72,9 +88,14 @@ a:hover{
     /* margin-right: 25%; */
     position: fixed;
     font-weight: 600;
-    transition: width .3s ease-in-out;
+    /* transition: width .3s ease-in-out; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     /* font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 /* main style consists of timer and notes */
 .main{
@@ -110,7 +131,7 @@ a:hover{
 .controls{
     width: 200px;
     height: 40px;
-    background-color: #2B2A2A;
+    background-color: #6C63FF;
     position: relative;
     margin: 35px;
     border-radius: 30px;
@@ -138,12 +159,14 @@ a:hover{
 .toggle{
     width: 100px;
     height: 40px;
-    background-color: #6C63FF;
     position: absolute;
+    background-color: transparent;
     left: 100px;
     border-radius: 30px;
     transition: left .3s ease-in;
-
+}
+.toggle .active{
+    background-color: #2B2A2A;
 }
 #work-timer,#break-timer{
     display: flex;
@@ -288,50 +311,51 @@ a:hover{
     font-size: 22px;
 }
 .notes-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #2B2A2A;
 }
+.notes-stack{
+    height: 100%;
+    width: 88%;
+    background-color: white;
+
+}
 #add-note{
-    background-color: transparent;
     border: none;
-    color: black;
-    font-size: 20px;
+    color: #d7d1d1;
+    font-size: 17.5px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    border-radius: 30px;
-    width: 100%;
+    border-radius: 10px;
+    width: 94%;
     height: 40px;
     padding: 10px;
+    margin: 5px;
+    margin-left: 10px;
+    background-color: #2B2A2A;
 }
 #add-note:hover{
-   background-color: rgb(230, 226, 226);
+   color: white;
 }
 #sharp-plus{
     padding: 10px;
     font-size: 17px;
 }
-.note-foot{
-    height: 50px;
+.before{
     width: 100%;
-    background-color: #1F1B2E;
-    display: flex;
-    justify-content: end;
-    align-items: flex-end;
+    height: 30px;
+
 }
 /* style for note */
 
-.one-note{
+/* .one-note{
     width: 88%;
     height: 130px;
     padding: 10px;
     margin: 3px 10px 3px 10px;
     border-radius: 5px;
     background-color: rgb(235, 228, 228);
-}
+} */
 textarea{
     outline: none;
     border: 1px solid rgb(53, 51, 51);
@@ -342,6 +366,8 @@ textarea{
     resize: none; margin: 3px 10px 3px 10px;
     border-radius: 5px;
     background-color: #2B2A2A;
-    color: #d7d1d1;
+    color: white;
 }
+
+
 

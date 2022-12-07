@@ -3,6 +3,7 @@ const home = document.getElementById("home");
 home.addEventListener('click',()=>{
   location.replace("home.html")
 })
+
 // music player js
 let song=document.getElementById("song")
 let arr=["audio1.mp3","audio2.mp3","audio3.mp3","audio4.mp3","audio5.mp3"]
@@ -86,6 +87,7 @@ start.addEventListener('click', function(){
   }
 
   document.getElementById("toggle").style.left = "0"
+  document.getElementById("toggle").classList.add("active")
 })
 reset.addEventListener('click', function(){
     // reset needs to change everything to starting stage
@@ -104,6 +106,8 @@ reset.addEventListener('click', function(){
     document.getElementById("b_time").classList.remove("active")
         document.getElementById("w_time").classList.add("active")
         document.getElementById("toggle").style.left = "100px"
+        start.innerHTML = "Start"
+        
 
 
 })
@@ -223,10 +227,13 @@ function noteshide(){
 // real notes start here
 const notesContainer = document.getElementById("notes-main");
 const addNoteButton = notesContainer.querySelector(".addnote");
+const foot = document.getElementById("foot");
 
 getNotes().forEach((note) => {
   const noteElement = createNoteElement(note.id, note.content);
-  notesContainer.insertBefore(noteElement, addNoteButton);
+
+  // notesContainer.insertAfter(noteElement, foot);
+  notesContainer.insertBefore( noteElement, foot);
 });
 
 addNoteButton.addEventListener("click", () => addNote());
@@ -282,7 +289,7 @@ function addNote() {
   };
 
   const noteElement = createNoteElement(noteObject.id, noteObject.content);
-  notesContainer.insertBefore(noteElement, addNoteButton);
+  notesContainer.insertBefore(noteElement, foot);
   newnotes.push(noteObject);
   saveNotes(newnotes);
 }
