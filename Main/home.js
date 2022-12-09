@@ -195,17 +195,6 @@ function stopInterval(){
     // this is to clear the interval set by the function set interval
     clearInterval(startTimer);
 }
-//toggle switch code for timer
-// var btn = document.getElementById('btn')
-
-// function leftClick() {
-// 	btn.style.left = '0'
-// }
-
-// function rightClick() {
-// 	btn.style.left = '110px'
-// }
-
 
 
 //notes js
@@ -251,7 +240,7 @@ function saveNotes(notes) {
 //for building html element we provide id and content
 //id is a unique identifier for every single notes
 function createNoteElement(id, content) {
-  const element = document.createElement("textarea");
+  const element = document.createElement("textarea")
   // const main = document.createElement("div");
 
   element.classList.add("note");
