@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');*{
     padding: 0;
     margin: 0;
 }
 body{
-  background-color: #1F1B2E;
+  background-color: #161616;
   user-select: none;
 }
+/* scrollbar style */
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: #2B2A2A;
+}
+::-webkit-scrollbar-thumb{
+  width: 10px;
+  background-color: #6C63FF;
+}
 #home{
-    background-color: #6C4EB3;
+    background-color: #2B2A2A;
     border: none;
-    color: white;
+    color: #d7d1d1;
     font-size: 19px;
 }
 .main{
@@ -18,24 +26,27 @@ body{
 
 }
 .main#blur.active{
-  filter: blur(20px);
+  filter: blur(200px);
   pointer-events: none;
   user-select: none;
 
 }
-.header h2{
+.nav h2{
     padding: 0 50px;
     margin: 10px ;
 }
-.header{
+.nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 70px;
-    background-color: #6C4EB3;
+    background-color: #2B2A2A;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     position: fixed;
-    font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 .buttons{
     padding: 3px ;
@@ -47,7 +58,7 @@ body{
     justify-content: center;
 }
 .buttons button{
-  margin-left: 5px;
+  margin-left: 10px;
 }
 button{
     cursor: pointer;
@@ -59,23 +70,27 @@ button{
     background-color: transparent;
     font-size: 18px;
     font-style: bold;
-    color: white;
-    transition: .2s;
+    color: #d7d1d1;
+    transition: border .1s ease-in;
 }
 #login:hover{
-  border: 2px solid #1F1B2E;
+  border: 2px solid #6C63FF;
+  color: rgb(255, 255, 255);
 
 }
 #signup{
     padding: 10px;
     border-radius: 5px;
     border: transparent;
-    color: rgb(255, 255, 255);
-    background-color: #1F1B2E;
+    color: #d7d1d1;
+    background-color: #6C63FF;
     font-size: 18px;
+    filter: brightness(100%);
+    margin-right: 5px;
 }
 #signup:hover{
-  background-color: #3f3e4d;
+  background-color: #4a41f7;
+  color: white;
 
 }
 
@@ -90,17 +105,19 @@ button{
     height: 450px;
     padding: 50px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
-    background: rgb(255, 255, 255);
+    background: #ffffff;
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
     border-radius: 10px;
+    z-index: 9999;
 }
 #signup-box.active{
     top: 50%;
     visibility: visible;
     opacity: 1;
     transform: 0.5s;
+    z-index: 9999;
   }
 #login-box{
     position: fixed;
@@ -110,11 +127,12 @@ button{
     width: 360px;
     height: 300px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
-    background: rgb(255, 255, 255);
+    background: #ffffff;
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
     border-radius: 10px;
+    z-index: 9999;
 
     /* add closing buttons to both tabs for login and signup */
   }
@@ -123,11 +141,13 @@ button{
     visibility: visible;
     opacity: 1;
     transform: 0.5s;
+    z-index: 9999;
   }
   
-  h1 {
+  h4 {
     text-align: center;
-    padding-top: 15px;
+    padding-top: 10px;
+    font-size: 30px;
     color: #24292f;
   }
  
@@ -158,8 +178,8 @@ button{
     height: 35px;
     margin-top: 20px;
     border: none;
-    background-color: rgb(36, 41, 47);
-    color: rgb(255, 255, 255);
+    background-color: #24292f;
+    color: #ffffff;
     font-size: 18px;
   }
   p {
@@ -179,7 +199,7 @@ button{
   width: 320px;
   margin-top: 20px;
   border: none;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 18px;
   height: 35px;
 
@@ -199,4 +219,199 @@ button{
 }
 #x-mark:hover{
   color: rgb(255, 30, 0);
+}
+
+/* main page style */
+
+/* header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d0dc;
+  padding: 40px;
+  gap: 240px;
+
+} */
+
+header{
+ display:flex;
+ justify-content: space-evenly;
+ align-items: center;
+ position: relative;
+ margin-top: 25px;
+ 
+
+}
+header .pic{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  margin-right: 40px;
+  top: 100px;
+  right: 600px;
+}
+header .line{
+  color: white;
+  position: absolute;
+  top: 120px;
+  left: 130px;
+  
+}
+.features{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 620px;
+  padding: 50px 0 20px 0;
+}
+.features h3{
+  padding: 0;
+}
+.box1,.box2,.box3{
+  width: 70%;
+  background-color: #2B2A2A;
+  height: 280px;
+  border-radius: 10px;
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: .4s ease-in-out;
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;} */
+}
+.box1 img,.box2 img,.box3 img{
+  height: 280px;
+  width: 320px;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  left: 0;
+}
+.features .lines h3{
+  text-align: center;
+  margin-right: 50px;
+  padding-bottom: 20px;
+}
+.features .lines{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 390px;
+  top: 15px;
+}
+.features .lines i{
+  color: white;
+  font-size: 20px;
+}
+.features .lines h3{
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  padding: 15px;
+  transition: .4s ease-in-out;
+}
+/* .features .lines ul{
+  
+} */
+.features .lines ul li{
+  color: white;
+  font-size: 20px;
+  padding: 7px;
+  transition: .4s ease-in-out;
+}
+.box1:hover,.box2:hover,.box3:hover{
+  transform: scale(1.05);
+
+}
+.origin{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.origin h3{
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+.boxes{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.vbox1,.vbox2,.vbox3{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 400px;
+  background-color: #2B2A2A;
+  border-radius: 10px;
+  margin: 20px;
+  transition: .3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.vbox1:hover,.vbox2:hover,.vbox3:hover{
+  transform: scale(1.05);
+}
+footer{
+  width: 100%;
+  height: 700px;
+  background-color: #2B2A2A;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer i{
+  font-size: 20px;
+  color: white;
+  padding: 20px;
+}
+.last{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+.last .pic{
+  margin-left: 40px;
+}
+
+
+
+.endlines{
+  padding: 10px;
+  margin-right: 50px;
+  margin-left: 200px;
+}
+.endlines p{
+  display: inline;
+}
+.endlines button{
+  position: absolute;
+  bottom: 200px;
+}
+
+
+.handles{
+  padding-top: 70px;
+}
+.handles i{
+  font-size: 26px;
+  transition: .2s ease-in-out;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.handles i:hover{
+  transform: scale(1.2);
 }
