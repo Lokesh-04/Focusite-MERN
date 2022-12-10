@@ -213,6 +213,13 @@ function noteshide(){
     document.getElementById("body").style.marginRight = "0"
     
 }
+function notesopen(){
+  const notespage = document.getElementById("arrow");
+  notespage.addEventListener('click',()=>{
+  location.replace("notes.html")
+})
+
+}
 // real notes start here
 const notesContainer = document.getElementById("notes-main");
 const addNoteButton = notesContainer.querySelector(".addnote");
