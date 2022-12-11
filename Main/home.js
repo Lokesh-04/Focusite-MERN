@@ -225,6 +225,7 @@ const notesContainer = document.getElementById("notes-main");
 const addNoteButton = notesContainer.querySelector(".addnote");
 const foot = document.getElementById("foot");
 
+
 getNotes().forEach((note) => {
   const noteElement = createNoteElement(note.id, note.content);
 
