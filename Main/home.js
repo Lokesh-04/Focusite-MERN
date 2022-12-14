@@ -143,7 +143,7 @@ function timer(){
       } else {
         work_minutes.innerText--;
       }
-        work_seconds.innerText = 3;
+        work_seconds.innerText = 59;
     }
 
     //Break Timer Countdown
