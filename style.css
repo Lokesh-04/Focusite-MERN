@@ -360,6 +360,22 @@ header .line{
 .vbox1:hover,.vbox2:hover,.vbox3:hover{
   transform: scale(1.05);
 }
+.vid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vid video{
+  z-index: 1;
+  /* display: none; */
+}
+.vid i{
+    font-size: 30px;
+    border: 1px solid white;
+    z-index: 3;
+    border: none;
+    color: rgb(75, 75, 75);
+}
 footer{
   width: 100%;
   height: 700px;

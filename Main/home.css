@@ -6,6 +6,7 @@ body{
    background-color: #161616;
    user-select: none;
    /* transition: margin-right .3s ease-in-out; */
+   transition: background-color 3s;
 }
 /* scrollbar style */
 ::-webkit-scrollbar{
@@ -25,6 +26,7 @@ button{
     border: none;
     color: #d7d1d1;
     font-size: 19px;
+    transition: background-color 3s;
 }
 #home:hover{
     color: white;
@@ -64,6 +66,7 @@ li a::after{
     background-color: #6C63FF;
     margin: .7px;
     display: block;
+    border-radius: 100px;
     
 }
 a{
@@ -79,7 +82,7 @@ li a:hover::after{
 }
 .nav h2{
     padding: 0 50px;
-    margin: 10px ;
+    margin: 10px;
 }
 .nav{
     display: flex;
@@ -93,12 +96,15 @@ li a:hover::after{
     font-weight: 600;
     /* transition: width .3s ease-in-out; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /* box-shadow: 0 .1px 20px rgb(219, 213, 213); */
     /* font-family: BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
+    transition: background-color 3s;
+
 }
 /* main style consists of timer and notes */
 .main{
@@ -136,7 +142,9 @@ li a:hover::after{
     position: relative;
     margin: 35px;
     border-radius: 30px;
+    /* display: none; */
 }
+
 .controls button{
     color: white;
     position: absolute;
@@ -210,7 +218,6 @@ li a:hover::after{
 }
 
 /* music-player style */
-/* music-player style */
 
 .music-player{
     display: flex;
@@ -225,8 +232,7 @@ li a:hover::after{
     font-size: 35px;
     padding: 0 20px 0 20px ;
     color: #6C63FF;
-    transition: .1s ease-in-out;
-    filter: drop-shadow(6px,5px,5px);
+    transition: 5s ease-in-out;
     
 }
 #play{
@@ -249,11 +255,15 @@ li a:hover::after{
     justify-content: center;
     transition: .2s ease-in;
 } 
-.plus_note:hover,#plus,#play:hover,#prev:hover,#next:hover{
+.plus_note:hover,#plus{
     /* hover effect for plus button */
     transform: scale(1.1);
     color: white;
+    
 
+}
+#play:hover,#prev:hover,#next:hover{
+    transform: scale(1.2);
 }
 .plus{
     color: #d7d1d1;
@@ -287,32 +297,41 @@ li a:hover::after{
     transition: width 1s ease-in-out;
 
 }
+.error{
+    padding-top: 70px;
+}
 .notes-header{
     background-color: #2B2A2A;
     color: white;
     height: 70px;
     width: 100%;
     display: flex;
+    /* justify-content: space-between; */
+    gap: 150px;
     flex-direction: row;
     align-items: center;
     padding-left: 10px;
+    font-family: sans-serif;
+    border-left: 1px solid #444141;
+    position: fixed;
+    z-index: 20;
 }
 .notes-nav{
-    position: absolute;
     right: 20px;
 }
 .notes-nav i{
     padding: 7px;
 }
 #x-mark{
-    font-size: 18.6px;
-    font-weight: 501;
+    font-size: 19px;
     transition: background-color 3s ease-in;
 
 }
-
+#arrow{
+    font-size: 19px;
+}
 #x-mark:hover{
-    color: rgb(245, 129, 97);
+    color: rgb(224, 62, 17);
 }
 #arrow{
     transition: background-color .3s ease;
@@ -324,13 +343,16 @@ li a:hover::after{
     color: white;
 }
 .notes-header #co{
-    font-size: 14px;
+    font-size: 11.7px;
+    color: rgb(218, 211, 211);
 }
 .notes-header #head{
-    font-size: 22px;
+    font-size: 19px;
+    font-weight: 550;
 }
 .notes-main{
     background-color: #2B2A2A;
+    position: absolute;
 }
 .notes-stack{
     height: 100%;
@@ -346,7 +368,7 @@ li a:hover::after{
     justify-content: left;
     align-items: center;
     border-radius: 10px;
-    width: 94%;
+    width: 95.5%;
     height: 40px;
     padding: 10px;
     margin: 5px;
@@ -355,10 +377,10 @@ li a:hover::after{
 }
 #add-note:hover{
    color: white;
+   
 }
 #sharp-plus{
-    padding: 10px;
-    font-size: 17px;
+    margin: 0 14px 0 7px;
 }
 .before{
     width: 100%;

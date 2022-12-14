@@ -29,6 +29,7 @@
             <div class="pomodoro">
                 <div class="controls">
                     <div id="toggle" class="toggle"></div>
+                    
                     <button id="start" class="btn">Start</button>
                     <button id="stop" class="btn">Pause</button>   
                     <!-- <div class="form-box">
@@ -45,7 +46,7 @@
                 <div class="circle">
                     <div class="wt active" id="w_time">
                         <div id="work-timer" class="timer">
-                            <p id="work_minutes">25</p>
+                            <p id="work_minutes">1</p>
                             <p id="semicolon">:</p>
                             <p id="work_seconds">00</p>
                         </div>
@@ -83,7 +84,7 @@
 
         <!-- notes section -->
         <div class="notes">
-            <div class="plus_note">
+            <div class="plus_note" id="plus_note">
                 <button id="plus" class="plus">+</button>
             </div>
 
@@ -98,11 +99,14 @@
                         <i id="x-mark" onclick="noteshide()" class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-                <div id="notes-main">
+                <div class="error">
+                    <div id="notes-main">
                     <!-- <button class="add-note" type="button">+</button> -->
                     <button class="addnote" id="add-note"><i id="sharp-plus" class="fa-sharp fa-solid fa-plus"></i>Take a note...</button>
                     <div id="foot"></div>
                 </div>
+                </div>
+                
 
             </div>
         </div>

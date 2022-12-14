@@ -3,7 +3,6 @@ const home = document.getElementById("home");
 home.addEventListener('click',()=>{
   location.replace("home.html")
 })
-
 // music player js
 let song=document.getElementById("song")
 let arr=["audio1.mp3","audio2.mp3","audio3.mp3","audio4.mp3","audio5.mp3"]
@@ -144,13 +143,16 @@ function timer(){
       } else {
         work_minutes.innerText--;
       }
-        work_seconds.innerText = 59;
+        work_seconds.innerText = 3;
     }
 
     //Break Timer Countdown
     if(work_minutes.innerText == 0 && work_seconds.innerText == 0){
         document.getElementById("b_time").classList.add("active")
         document.getElementById("w_time").classList.remove("active")
+        document.getElementById("body").style.backgroundColor = "#ffffff"
+        document.getElementById("nav").style.backgroundColor = "#ffffff"
+        document.getElementById("home").style.backgroundColor = "#ffffff"
 
         if(break_seconds.innerText != 0){
           if ( break_seconds.innerText <= 10 ) {
@@ -205,13 +207,14 @@ plus.addEventListener('click',()=>{
     document.getElementById("notes-div").classList.add("active")
     document.getElementById("nav").style.width = "80%"
     document.getElementById("body").style.marginRight = "20%"
+    document.getElementById("plus_note").style.display = "none"
 
 })
 function noteshide(){
     document.getElementById("notes-div").classList.remove("active")
     document.getElementById("nav").style.width = "100%"
     document.getElementById("body").style.marginRight = "0"
-    
+    document.getElementById("plus_note").style.display = "block"
 }
 function notesopen(){
   const notespage = document.getElementById("arrow");
