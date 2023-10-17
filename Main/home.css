@@ -8,6 +8,11 @@ body{
    /* transition: margin-right .3s ease-in-out; */
    transition: background-color 3s;
 }
+
+i{
+    cursor: pointer;
+}
+
 /* scrollbar style */
 ::-webkit-scrollbar{
     width: 10px;
