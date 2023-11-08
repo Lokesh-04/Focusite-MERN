@@ -5,6 +5,8 @@ home.addEventListener('click',()=>{
 })
 // music player js
 let song=document.getElementById("song")
+song.volume = 0.1;
+
 let arr=["audio1.mp3","audio2.mp3","audio3.mp3","audio4.mp3","audio5.mp3"]
 let length = arr.length
 let i=0
