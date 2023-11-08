@@ -2,10 +2,10 @@
 This is made for attaining deep focus with some productivity principles
 
 
-#backend
+## backend
 
 run ````npm i````
 
-#frontend
+## frontend
 
 run ````npm i````
