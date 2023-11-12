@@ -1,12 +1,10 @@
 import React from 'react'
-import MusicPlayer from './components/MusicPlayer'
-import Timer from './components/Timer'
+import Home from './components/Home/Home'
 
 const App = () => {
   return (
     <div>
-      <Timer />
-      <MusicPlayer />
+      <Home/>
     </div>
   )
 }

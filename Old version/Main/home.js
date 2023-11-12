@@ -1,8 +1,8 @@
-//onclick logo -> home page direct
 const home = document.getElementById("home");
 home.addEventListener('click',()=>{
   location.replace("home.html")
 })
+
 // music player js
 let song=document.getElementById("song")
 song.volume = 0.1;
@@ -10,6 +10,7 @@ song.volume = 0.1;
 let arr=["audio1.mp3","audio2.mp3","audio3.mp3","audio4.mp3","audio5.mp3"]
 let length = arr.length
 let i=0
+
 function play(){        
 if ( document.getElementById("m_text").innerHTML == "play"){        
 document.getElementById("play").setAttribute("class","fa-solid fa-circle-play")     
@@ -30,6 +31,7 @@ song.onended = function() {
 // make functions and then call functions 
 }
 }
+
 function next(){
   if(document.getElementById("m_text").innerHTML == "pause"){
     document.getElementById("play").setAttribute("class","fa-solid fa-circle-pause")
@@ -44,6 +46,7 @@ song=document.getElementById("song")
 song.play()
 }
 }
+
 function prev(){    
 i=i-1
 if(document.getElementById("m_text").innerHTML == "pause"){
@@ -53,8 +56,6 @@ document.getElementById("song").setAttribute("src",arr[i])
 song=document.getElementById("song")    
 song.play()
 }
-
-
 
 //pomodoro timer js
 
@@ -90,13 +91,14 @@ start.addEventListener('click', function(){
   document.getElementById("toggle").style.left = "0"
   document.getElementById("toggle").classList.add("active")
 })
+
 reset.addEventListener('click', function(){
     // reset needs to change everything to starting stage
 
-    work_minutes.innerText = 25;
+    work_minutes.innerText = "25";
     work_seconds.innerText = "00";
 
-    break_minutes.innerText = 05;
+    break_minutes.innerText = "05";
     break_seconds.innerText = "00";
 
     // document.getElementById('counter').innerText = 0;
@@ -125,7 +127,6 @@ stop.addEventListener('click', function(){
     }
     
 })
-
 
 //Start Timer Function
 function timer(){
@@ -212,19 +213,21 @@ plus.addEventListener('click',()=>{
     document.getElementById("plus_note").style.display = "none"
 
 })
+
 function noteshide(){
     document.getElementById("notes-div").classList.remove("active")
     document.getElementById("nav").style.width = "100%"
     document.getElementById("body").style.marginRight = "0"
     document.getElementById("plus_note").style.display = "block"
 }
+
 function notesopen(){
   const notespage = document.getElementById("arrow");
   notespage.addEventListener('click',()=>{
   location.replace("notes.html")
 })
-
 }
+
 // real notes start here
 const notesContainer = document.getElementById("notes-main");
 const addNoteButton = notesContainer.querySelector(".addnote");
@@ -313,5 +316,3 @@ function deleteNote(id, element) {
   saveNotes(notes);
   notesContainer.removeChild(element);
 }
-
-
