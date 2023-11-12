@@ -5,7 +5,6 @@ import audioFile from '../../assets/audio/audio1.mp3';
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioPlayer = useRef(null);
-  audioPlayer.volume = 0.5;
 
   const handleTogglePlay = () => {
     setIsPlaying(!isPlaying);
