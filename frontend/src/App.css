@@ -1,0 +1,24 @@
+#nav{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+#brand{
+    color: #bfbfbf;
+    margin: 15px;
+    font-size: xx-large;
+}
+
+.nav-item{
+    margin: 10px;
+    text-decoration: none;
+    color: #bfbfbf;
+}
+
+.nav-item:hover{
+    color: white;
+}
