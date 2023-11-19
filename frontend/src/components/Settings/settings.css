@@ -12,7 +12,3 @@
 .settings :hover{
     background-color: rgb(80, 80, 80);
 }
-
-#music-settings-content, #timer-settings-content{
-    display: none;
-}
