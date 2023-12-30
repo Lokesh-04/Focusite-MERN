@@ -1,0 +1,14 @@
+/* style for add-note button in the home page where user can quickly add notes */
+
+#quick-add{
+    border-radius: 25px 0 0 25px;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+#quick-add:hover{
+    background-color: rgb(42, 41, 41);
+}

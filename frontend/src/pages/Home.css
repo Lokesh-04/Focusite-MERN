@@ -1,0 +1,30 @@
+#home{
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    justify-content: space-between;
+    height: 91.3vh;
+}
+
+#settings{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: red;
+    width: 25%;
+}
+
+#add-note{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: green;
+    width: 25%;
+}
+
+#center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
