@@ -23,14 +23,14 @@ const Settings = () => {
 
 
   return (
-    <div>
+    <div id='main'>
 
     <div id="all-settings">
         <div id="music-settings" className='settings'>
-        <FadersHorizontal size={32} color='white' weight="thin" onClick={showMusicSettings}/>
+        <FadersHorizontal size={40} color='white' weight="thin" onClick={showMusicSettings}/>
         </div>
         <div id="timer-settings" className='settings'>
-        <Timer size={32} color='white' weight="thin" onClick={showTimerSettings}/>
+        <Timer size={40} color='white' weight="thin" onClick={showTimerSettings}/>
         </div>
     </div>    
     {/* Music Settings */}

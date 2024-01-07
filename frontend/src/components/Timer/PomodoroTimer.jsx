@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../Timer/PomodoroTimer.css";
 
 function PomodoroTimer() {
   const [timerMode, setTimerMode] = useState("work");
@@ -7,16 +8,15 @@ function PomodoroTimer() {
   const [isPaused, setIsPaused] = useState(true);
   const [cycles, setCycles] = useState(1);
 
-  useEffect(() =>{
-    if(timerMode == "work"){
+  useEffect(() => {
+    if (timerMode == "work") {
       setMinutesLeft(25);
       setSecondsLeft(0);
-    }
-    else if(timerMode == "break"){
+    } else if (timerMode == "break") {
       setMinutesLeft(5);
       setSecondsLeft(0);
-    }
-    else{ //longBreak
+    } else {
+      //longBreak
       setMinutesLeft(15);
       setSecondsLeft(0);
     }
@@ -25,24 +25,27 @@ function PomodoroTimer() {
   useEffect(() => {
     if (!isPaused) {
       const interval = setInterval(() => {
-        if(secondsLeft == 0 && minutesLeft == 0 && timerMode == "work"){
+        if (secondsLeft == 0 && minutesLeft == 0 && timerMode == "work") {
           setTimerMode("break");
-        }
-        else if(secondsLeft == 0 && minutesLeft == 0 && timerMode == "break"){
-          if(cycles == 2){ //add variable for target cycles of work->break->work......
+        } else if (
+          secondsLeft == 0 &&
+          minutesLeft == 0 &&
+          timerMode == "break"
+        ) {
+          if (cycles == 2) {
+            //add variable for target cycles of work->break->work......
             setTimerMode("longBreak");
-          }
-          else{
+          } else {
             setTimerMode("work");
-            setCycles(cycles + 1)
+            setCycles(cycles + 1);
           }
         }
 
-        if(secondsLeft == 0){
+        if (secondsLeft == 0) {
           setSecondsLeft(59);
           setMinutesLeft((minutesLeft) => minutesLeft - 1);
           setSecondsLeft((secondsLeft) => secondsLeft - 1);
-        } else{
+        } else {
           setSecondsLeft((secondsLeft) => secondsLeft - 1);
         }
       }, 1000);
@@ -66,18 +69,48 @@ function PomodoroTimer() {
   }
 
   return (
-    <div>
-      <h1>Pomodoro Timer</h1>
-      <button onClick={() =>{setTimerMode("work")}}>work</button>
-      <button onClick={() =>{setTimerMode("break")}}>break</button>
-      <button onClick={() =>{setTimerMode("longBreak")}}>long break</button>
-      <p>
-        {minutesLeft}:{secondsLeft}
-      </p>
+    <div id="pomodoro">
+      <div id="timers">
+        <button
+          className="timer"
+          id="work"
+          onClick={() => {
+            setTimerMode("work");
+          }}
+        >
+          work
+        </button>
+        <button
+          className="timer"
+          id="break"
+          onClick={() => {
+            setTimerMode("break");
+          }}
+        >
+          break
+        </button>
+        <button
+          className="timer"
+          id="longbreak"
+          onClick={() => {
+            setTimerMode("longBreak");
+          }}
+        >
+          long break
+        </button>
+      </div>
 
-      <button onClick={handleStart}>Start</button>
-      <button onClick={handlePause}>Pause</button>
-      <button onClick={handleReset}>Reset</button>
+      <div id="circle">
+        <div id="time">
+          {minutesLeft}:{secondsLeft}
+        </div>
+
+        <div id="controls">
+          <button className="control" onClick={handleStart}>Start</button>
+          <button className="control" onClick={handlePause}>Pause</button>
+          <button className="control" onClick={handleReset}>Reset</button>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,49 @@
+#pomodoro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#timers{
+    background-color: rgb(233, 11, 11);
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+}
+
+.timer{
+    margin: 0 10px;
+    border: none;
+    background-color: rgb(249, 246, 246);
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+.control{
+    background-color: transparent;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#circle{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: rgb(126, 160, 226);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#time{
+    font-weight: bolder;
+    font-size: 50px;
+}
+
