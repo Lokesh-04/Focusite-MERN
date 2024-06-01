@@ -11,7 +11,6 @@ const MusicSettings = () => {
         <div className="genre">Instrumental</div>
         <div className="genre">Lofi hip-hop</div>
         <div className="genre">Acoustic</div>
-
       </div>
     </div>
   )

@@ -1,24 +1,24 @@
-#nav{
-    width: 100%;
-    height: max-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
+#nav {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#brand{
-    color: #bfbfbf;
-    margin: 15px;
-    font-size: xx-large;
+#brand {
+  color: #1b1a1a;
+  margin: 15px;
+  font-size: xx-large;
 }
 
-.nav-item{
-    margin: 10px;
-    text-decoration: none;
-    color: #bfbfbf;
+.nav-item {
+  margin: 10px;
+  text-decoration: none;
+  color: #1b1a1a;
+  font-size: 20px;
 }
 
-.nav-item:hover{
-    color: white;
+.nav-item:hover {
+  color: rgb(62, 60, 60);
 }

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Timer/PomodoroTimer.css";
+import { Horse, Heart, Play, Pause,ArrowClockwise} from "@phosphor-icons/react";
+
 
 function PomodoroTimer() {
   const [timerMode, setTimerMode] = useState("work");
@@ -41,11 +43,11 @@ function PomodoroTimer() {
           }
         }
 
-        if (secondsLeft == 0) {
+        if(secondsLeft == 0){
           setSecondsLeft(59);
           setMinutesLeft((minutesLeft) => minutesLeft - 1);
-          setSecondsLeft((secondsLeft) => secondsLeft - 1);
-        } else {
+        }
+         else {
           setSecondsLeft((secondsLeft) => secondsLeft - 1);
         }
       }, 1000);
@@ -70,6 +72,7 @@ function PomodoroTimer() {
 
   return (
     <div id="pomodoro">
+      
       <div id="timers">
         <button
           className="timer"
@@ -102,13 +105,13 @@ function PomodoroTimer() {
 
       <div id="circle">
         <div id="time">
-          {minutesLeft}:{secondsLeft}
+          {minutesLeft <= 9 ? '0' + minutesLeft : minutesLeft}:{secondsLeft <= 9 ? '0' + secondsLeft : secondsLeft}
         </div>
 
         <div id="controls">
-          <button className="control" onClick={handleStart}>Start</button>
-          <button className="control" onClick={handlePause}>Pause</button>
-          <button className="control" onClick={handleReset}>Reset</button>
+          {isPaused && <button className="control" onClick={handleStart}><Play size={32} /></button>}
+          {!isPaused && <button className="control" onClick={handlePause}><Pause size={32} /></button>}
+          <button className="control" onClick={handleReset}><ArrowClockwise size={32} /></button>
         </div>
       </div>
     </div>
